@@ -1,3 +1,4 @@
+import React from 'react';
 import { ArrowRight, Shield, Globe, Zap, CreditCard, Building, Smartphone, TrendingUp, Users, Award, CheckCircle, Wallet, DollarSign, BarChart3, Lock, Star, Sparkles, Play, Calculator } from 'lucide-react';
 import { Navigation } from '../components/Navigation';
 import { ParticleField } from '../components/ParticleField';
