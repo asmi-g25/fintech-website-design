@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Check, X, Star, Shield, Zap, Globe, CreditCard, TrendingUp } from 'lucide-react';
 
 export function ComparisonTool() {
