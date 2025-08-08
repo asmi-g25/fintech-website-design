@@ -1,24 +1,38 @@
-import { ArrowRight, Shield, Globe, Zap, CreditCard, Building, Smartphone, TrendingUp, Users, Award, CheckCircle, Wallet, DollarSign, BarChart3, Lock, Star, Sparkles, Play } from 'lucide-react';
+import { ArrowRight, Shield, Globe, Zap, CreditCard, Building, Smartphone, TrendingUp, Users, Award, CheckCircle, Wallet, DollarSign, BarChart3, Lock, Star, Sparkles, Play, Calculator } from 'lucide-react';
 import { Navigation } from '../components/Navigation';
+import { ParticleField } from '../components/ParticleField';
+import { MarketTicker } from '../components/MarketTicker';
+import { PricingCalculator } from '../components/PricingCalculator';
+import { Testimonials } from '../components/Testimonials';
+import { SecurityBadges } from '../components/SecurityBadges';
+import { LiveSupport } from '../components/LiveSupport';
 
 export default function Index() {
   return (
     <div className="min-h-screen bg-black overflow-x-hidden">
       <Navigation />
+      <ParticleField />
+      <LiveSupport />
+      
+      {/* Market Ticker */}
+      <div className="fixed top-16 left-0 right-0 z-40">
+        <MarketTicker />
+      </div>
       
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center">
-        {/* Animated Background */}
+      <section id="home" className="relative min-h-screen flex items-center justify-center pt-20">
+        {/* Enhanced Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-black to-xexon-dark"></div>
           <div className="absolute inset-0 gradient-mesh"></div>
           
-          {/* Floating Geometric Elements */}
+          {/* Enhanced Floating Elements */}
           <div className="absolute top-20 left-10 w-32 h-32 bg-xexon-gold/10 rounded-full blur-xl animate-pulse-slow"></div>
           <div className="absolute top-40 right-20 w-24 h-24 bg-xexon-gold/20 rounded-full blur-lg animate-float"></div>
           <div className="absolute bottom-40 left-20 w-16 h-16 bg-xexon-gold/15 rounded-full blur-md animate-pulse-slow"></div>
+          <div className="absolute top-60 left-1/2 w-20 h-20 bg-xexon-gold/8 rounded-full blur-lg animate-float"></div>
           
-          {/* Grid Pattern */}
+          {/* Enhanced Grid Pattern */}
           <div className="absolute inset-0 opacity-[0.03]">
             <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
               <defs>
@@ -33,21 +47,21 @@ export default function Index() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Hero Content */}
-            <div className="text-center lg:text-left space-y-8">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-xexon-gold/20">
-                <Sparkles className="w-4 h-4 text-xexon-gold" />
-                <span className="text-sm text-gray-300">Tier-1 Offshore Banking</span>
+            {/* Enhanced Hero Content */}
+            <div className="text-center lg:text-left space-y-8 animate-slide-up">
+              {/* Premium Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-xexon-gold/20 hover:border-xexon-gold/40 transition-colors duration-300">
+                <Sparkles className="w-4 h-4 text-xexon-gold animate-pulse" />
+                <span className="text-sm text-gray-300 font-medium">Tier-1 Offshore Banking</span>
               </div>
               
               <div className="space-y-6">
                 <h1 className="text-6xl lg:text-8xl font-black text-white leading-none">
-                  Cash Out
+                  <span className="block animate-fade-in">Cash Out</span>
                   <span className="block bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent animate-glow">
                     Crypto Assets
                   </span>
-                  <span className="block text-white">Easily</span>
+                  <span className="block text-white animate-fade-in">Easily</span>
                 </h1>
                 
                 <div className="space-y-4 max-w-2xl">
@@ -55,14 +69,15 @@ export default function Index() {
                     Use the <span className="text-xexon-gold font-semibold">Xexon crypto debit card</span> at any Visa, Mastercard, or UnionPay merchant or ATM worldwide.
                   </p>
                   <p className="text-lg text-gray-400">
-                    <span className="text-xexon-gold">Plus</span> — Tier-1 offshore bank account, secure crypto wallet, diverse derivatives trading, crypto-backed loans.
+                    <span className="text-xexon-gold font-semibold">Plus</span> — Tier-1 offshore bank account, secure crypto wallet, diverse derivatives trading, crypto-backed loans.
                   </p>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="group relative bg-gradient-to-r from-xexon-gold to-yellow-400 text-black px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-xexon-gold/25 hover:scale-105">
-                  <span className="flex items-center justify-center gap-2">
+                <button className="group relative bg-gradient-to-r from-xexon-gold to-yellow-400 text-black px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-xexon-gold/25 hover:scale-105 overflow-hidden">
+                  <span className="absolute inset-0 bg-white/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
+                  <span className="relative flex items-center justify-center gap-2">
                     Get Started Now
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
@@ -75,29 +90,29 @@ export default function Index() {
                 </button>
               </div>
 
-              {/* Trust Indicators */}
+              {/* Enhanced Trust Indicators */}
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/10">
-                <div className="text-center">
-                  <div className="text-2xl lg:text-3xl font-bold text-xexon-gold">$50B+</div>
+                <div className="text-center group">
+                  <div className="text-2xl lg:text-3xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">$50B+</div>
                   <div className="text-sm text-gray-400">Assets Secured</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl lg:text-3xl font-bold text-xexon-gold">200+</div>
+                <div className="text-center group">
+                  <div className="text-2xl lg:text-3xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">200+</div>
                   <div className="text-sm text-gray-400">Countries</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl lg:text-3xl font-bold text-xexon-gold">99.9%</div>
+                <div className="text-center group">
+                  <div className="text-2xl lg:text-3xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">99.9%</div>
                   <div className="text-sm text-gray-400">Uptime</div>
                 </div>
               </div>
             </div>
 
-            {/* Hero Visual */}
-            <div className="relative">
+            {/* Enhanced Hero Visual */}
+            <div className="relative animate-fade-in">
               {/* Main Video Container */}
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-xexon-gold/20 to-yellow-400/20 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
-                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 group-hover:border-white/20 transition-colors duration-300">
                   <iframe
                     src="https://drive.google.com/file/d/1mYTbt9pzyQqBsnrRscAYQ96dSY6hiwsH/preview"
                     className="w-full h-full"
@@ -107,7 +122,7 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* Floating Card */}
+              {/* Enhanced Floating Card */}
               <div className="absolute -top-12 -right-12 z-20 hidden lg:block animate-float">
                 <div className="relative group">
                   <div className="absolute -inset-2 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-2xl blur-md opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
@@ -119,9 +134,9 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* Floating Stats */}
+              {/* Enhanced Floating Stats */}
               <div className="absolute -bottom-8 -left-8 z-20 hidden lg:block">
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl">
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                     <span className="text-sm text-gray-300">Live Processing</span>
@@ -152,9 +167,9 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="grid lg:grid-cols-12 gap-20 items-center">
             {/* Features Grid */}
-            <div className="grid gap-8">
+            <div className="lg:col-span-7 grid gap-8">
               {[
                 {
                   icon: Building,
@@ -200,25 +215,31 @@ export default function Index() {
               ))}
             </div>
 
-            {/* Video Container */}
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-xexon-gold/20 to-yellow-400/20 rounded-3xl blur-lg"></div>
-              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
-                <iframe
-                  src="https://drive.google.com/file/d/1kWYOhy8gwD6A41Tf0aAsjYosQXRsvpd4/preview"
-                  className="w-full h-full"
-                  allow="autoplay"
-                  title="Why XEXON"
-                />
-              </div>
-              
-              {/* Floating Badge */}
-              <div className="absolute -top-4 -right-4 bg-gradient-to-r from-xexon-gold to-yellow-400 text-black px-6 py-3 rounded-full font-bold shadow-lg animate-pulse-slow">
-                <div className="flex items-center gap-2">
-                  <Award className="w-5 h-5" />
-                  Award Winning
+            {/* Video and Calculator */}
+            <div className="lg:col-span-5 space-y-8">
+              {/* Video Container */}
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-xexon-gold/20 to-yellow-400/20 rounded-3xl blur-lg"></div>
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+                  <iframe
+                    src="https://drive.google.com/file/d/1kWYOhy8gwD6A41Tf0aAsjYosQXRsvpd4/preview"
+                    className="w-full h-full"
+                    allow="autoplay"
+                    title="Why XEXON"
+                  />
+                </div>
+                
+                {/* Floating Badge */}
+                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-xexon-gold to-yellow-400 text-black px-6 py-3 rounded-full font-bold shadow-lg animate-pulse-slow">
+                  <div className="flex items-center gap-2">
+                    <Award className="w-5 h-5" />
+                    Award Winning
+                  </div>
                 </div>
               </div>
+
+              {/* Pricing Calculator */}
+              <PricingCalculator />
             </div>
           </div>
         </div>
@@ -316,15 +337,15 @@ export default function Index() {
                 />
               </div>
 
-              {/* Floating Stats Cards */}
-              <div className="absolute -bottom-8 -left-8 bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl">
+              {/* Enhanced Floating Stats Cards */}
+              <div className="absolute -bottom-8 -left-8 bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
                 <div className="text-center">
                   <div className="text-3xl font-black bg-gradient-to-r from-xexon-gold to-yellow-400 bg-clip-text text-transparent">$50B+</div>
                   <div className="text-sm text-gray-300">Assets Processed</div>
                 </div>
               </div>
 
-              <div className="absolute -top-8 -right-8 bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl">
+              <div className="absolute -top-8 -right-8 bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
                 <div className="text-center">
                   <div className="text-3xl font-black bg-gradient-to-r from-xexon-gold to-yellow-400 bg-clip-text text-transparent">200+</div>
                   <div className="text-sm text-gray-300">Countries</div>
@@ -334,6 +355,12 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* Security Badges Section */}
+      <SecurityBadges />
 
       {/* Footer */}
       <footer id="contact" className="relative py-20">
@@ -348,13 +375,13 @@ export default function Index() {
                 className="h-10 w-auto"
               />
               <p className="text-gray-300 text-lg leading-relaxed max-w-md">
-                Leading the future of digital finance with innovative solutions for global wealth management.
+                Leading the future of digital finance with innovative solutions for global wealth management and offshore banking.
               </p>
               <div className="space-y-3 text-gray-400">
-                <div>Rademan Inc.</div>
+                <div className="font-semibold">Rademan Inc.</div>
                 <div>2 Puddle Dock, London EC4V 3DB, United Kingdom</div>
               </div>
-              <button className="bg-gradient-to-r from-xexon-gold to-yellow-400 text-black px-8 py-3 rounded-xl font-bold hover:shadow-lg hover:shadow-xexon-gold/25 transition-all duration-300">
+              <button className="bg-gradient-to-r from-xexon-gold to-yellow-400 text-black px-8 py-3 rounded-xl font-bold hover:shadow-lg hover:shadow-xexon-gold/25 transition-all duration-300 hover:scale-105">
                 Sign In / Sign Up
               </button>
             </div>
@@ -382,6 +409,10 @@ export default function Index() {
                   support@xexon.com
                 </a>
                 <div className="text-gray-400">24/7 Global Support</div>
+                <div className="flex items-center gap-2 text-gray-400">
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  Live chat available
+                </div>
               </div>
             </div>
           </div>
