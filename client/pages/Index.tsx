@@ -135,20 +135,8 @@ export default function Index() {
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F9bf4348cc59849228c41bda59add7fc0%2Fa75fded42ac64ccb853d1616d19a2028?format=webp&width=800"
                     alt="XEXON Debit Card"
-                    className="relative w-56 h-36 object-cover rounded-xl shadow-2xl transform rotate-12 hover:rotate-6 transition-transform duration-300 border border-white/20"
+                    className="relative w-56 h-36 object-cover rounded-xl shadow-2xl transform rotate-12 hover:rotate-6 transition-transform duration-300 border border-white/20 -mt-0.5"
                   />
-                </div>
-              </div>
-
-              {/* Enhanced Floating Stats */}
-              <div className="absolute -bottom-8 -left-8 z-20 hidden lg:block">
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="text-sm text-gray-300">Live Processing</span>
-                  </div>
-                  <div className="text-2xl font-bold text-white">$2.4M</div>
-                  <div className="text-sm text-gray-400">Today's Volume</div>
                 </div>
               </div>
             </div>
@@ -265,19 +253,6 @@ export default function Index() {
                   </div>
                 </div>
 
-                {/* Professional Usage Images */}
-                <div className="grid grid-cols-2 gap-4">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F9bf4348cc59849228c41bda59add7fc0%2F9d750b2837ef48cbb87f6ffc5cdd13d2?format=webp&width=800"
-                    alt="XEXON Professional Usage"
-                    className="w-full h-24 object-cover rounded-xl shadow-lg"
-                  />
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F9bf4348cc59849228c41bda59add7fc0%2F7c3a9bdd66c2410cb06014c974540136?format=webp&width=800"
-                    alt="XEXON Business Environment"
-                    className="w-full h-24 object-cover rounded-xl shadow-lg"
-                  />
-                </div>
               </div>
 
               {/* Pricing Calculator */}
@@ -416,14 +391,6 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* Additional Professional Images */}
-              <div className="relative">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F9bf4348cc59849228c41bda59add7fc0%2F5a9a322e89c244b38f784a54c5285e09?format=webp&width=800"
-                  alt="XEXON Global Reach"
-                  className="w-full h-32 object-cover rounded-xl shadow-lg border border-white/20"
-                />
-              </div>
             </div>
           </div>
         </div>
