@@ -27,6 +27,13 @@ export default {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        xexon: {
+          gold: "hsl(var(--xexon-gold))",
+          "gold-light": "hsl(var(--xexon-gold-light))",
+          "gold-dark": "hsl(var(--xexon-gold-dark))",
+          dark: "hsl(var(--xexon-dark))",
+          "dark-lighter": "hsl(var(--xexon-dark-lighter))",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
