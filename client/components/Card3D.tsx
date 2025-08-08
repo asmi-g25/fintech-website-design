@@ -22,7 +22,7 @@ function DebitCard({ isFlipped }: { isFlipped: boolean }) {
   return (
     <group ref={cardRef}>
       {/* Card Front */}
-      <group visible={Math.abs(cardRef.current?.rotation.y || 0) < Math.PI / 2}>
+      <group visible={!isFlipped}>
         {/* Card Base */}
         <Box args={[4, 2.5, 0.05]} position={[0, 0, 0]}>
           <meshStandardMaterial
@@ -86,7 +86,7 @@ function DebitCard({ isFlipped }: { isFlipped: boolean }) {
       </group>
 
       {/* Card Back */}
-      <group visible={Math.abs(cardRef.current?.rotation.y || 0) >= Math.PI / 2} rotation={[0, Math.PI, 0]}>
+      <group visible={isFlipped} rotation={[0, Math.PI, 0]}>
         <Box args={[4, 2.5, 0.05]} position={[0, 0, 0]}>
           <meshStandardMaterial
             color="#1a1a1a"
@@ -141,9 +141,10 @@ export function Card3D() {
         camera={{ position: [0, 0, 6], fov: 45 }}
         style={{ background: 'transparent' }}
       >
-        <ambientLight intensity={0.5} />
-        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} />
-        <pointLight position={[-10, -10, -10]} intensity={0.5} />
+        <ambientLight intensity={0.8} />
+        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1.2} />
+        <pointLight position={[-10, -10, -10]} intensity={0.7} />
+        <pointLight position={[5, 5, 5]} intensity={0.5} color="#D4AF37" />
         
         <DebitCard isFlipped={isFlipped} />
         
