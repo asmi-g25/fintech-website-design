@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { MessageCircle, X, Send, Phone, Mail, Clock } from 'lucide-react';
 
 export function LiveSupport() {
