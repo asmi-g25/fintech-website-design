@@ -143,7 +143,10 @@ export function TradingDashboard() {
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-white">
-                    ${selectedData.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: selectedData.symbol === 'BTC' ? 0 : 4 })}
+                    ${selectedData.symbol === 'BTC'
+                      ? selectedData.price.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+                      : selectedData.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })
+                    }
                   </div>
                   <div className={`flex items-center gap-1 ${selectedData.change >= 0 ? 'text-green-400' : 'text-red-400'}`}>
                     {selectedData.change >= 0 ? (
@@ -224,7 +227,10 @@ export function TradingDashboard() {
                 </div>
                 <div className="text-right">
                   <div className="text-white font-semibold text-sm">
-                    ${crypto.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: crypto.symbol === 'BTC' ? 0 : 4 })}
+                    ${crypto.symbol === 'BTC'
+                      ? crypto.price.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+                      : crypto.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })
+                    }
                   </div>
                   <div className={`text-xs ${crypto.change >= 0 ? 'text-green-400' : 'text-red-400'}`}>
                     {crypto.changePercent >= 0 ? '+' : ''}{crypto.changePercent.toFixed(2)}%
