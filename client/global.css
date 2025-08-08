@@ -40,11 +40,11 @@
     --radius: 0.5rem;
 
     /* XEXON Brand Colors */
-    --xexon-gold: 45 100% 51%;
-    --xexon-gold-light: 48 100% 67%;
-    --xexon-gold-dark: 42 100% 35%;
-    --xexon-dark: 217 31% 17%;
-    --xexon-dark-lighter: 217 25% 25%;
+    --xexon-gold: 45 69% 53%;
+    --xexon-gold-light: 45 69% 63%;
+    --xexon-gold-dark: 45 69% 43%;
+    --xexon-dark: 180 47% 19%;
+    --xexon-dark-lighter: 180 47% 25%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,11 +101,11 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     /* XEXON Dark Mode Colors */
-    --xexon-gold: 45 100% 51%;
-    --xexon-gold-light: 48 100% 67%;
-    --xexon-gold-dark: 42 100% 35%;
-    --xexon-dark: 217 31% 17%;
-    --xexon-dark-lighter: 217 25% 25%;
+    --xexon-gold: 45 69% 53%;
+    --xexon-gold-light: 45 69% 63%;
+    --xexon-gold-dark: 45 69% 43%;
+    --xexon-dark: 180 47% 19%;
+    --xexon-dark-lighter: 180 47% 25%;
   }
 }
 
