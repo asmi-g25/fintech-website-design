@@ -8,16 +8,21 @@ function DebitCard({ isFlipped }: { isFlipped: boolean }) {
 
   useFrame((state) => {
     if (cardRef.current) {
-      cardRef.current.rotation.y = isFlipped ? Math.PI : 0;
+      // Smooth flip transition
+      const targetRotation = isFlipped ? Math.PI : 0;
+      cardRef.current.rotation.y += (targetRotation - cardRef.current.rotation.y) * 0.1;
+
+      // Gentle floating animation
       cardRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.5) * 0.02;
       cardRef.current.rotation.z = Math.cos(state.clock.elapsedTime * 0.3) * 0.01;
+      cardRef.current.position.y = Math.sin(state.clock.elapsedTime * 0.8) * 0.05;
     }
   });
 
   return (
     <group ref={cardRef}>
       {/* Card Front */}
-      <group visible={!isFlipped}>
+      <group visible={Math.abs(cardRef.current?.rotation.y || 0) < Math.PI / 2}>
         {/* Card Base */}
         <Box args={[4, 2.5, 0.05]} position={[0, 0, 0]}>
           <meshStandardMaterial
@@ -81,7 +86,7 @@ function DebitCard({ isFlipped }: { isFlipped: boolean }) {
       </group>
 
       {/* Card Back */}
-      <group visible={isFlipped} rotation={[0, Math.PI, 0]}>
+      <group visible={Math.abs(cardRef.current?.rotation.y || 0) >= Math.PI / 2} rotation={[0, Math.PI, 0]}>
         <Box args={[4, 2.5, 0.05]} position={[0, 0, 0]}>
           <meshStandardMaterial
             color="#1a1a1a"
@@ -120,7 +125,7 @@ export function Card3D() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIsFlipped(prev => !prev);
-    }, 4000);
+    }, 5000); // Slightly longer interval
 
     return () => clearInterval(interval);
   }, []);
