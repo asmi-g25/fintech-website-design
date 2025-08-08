@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Activity, MapPin, Users, TrendingUp, CreditCard, Globe2 } from 'lucide-react';
 
 interface ActivityItem {
