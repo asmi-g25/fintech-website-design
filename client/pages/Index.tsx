@@ -113,9 +113,39 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Enhanced Hero Visual with 3D Card */}
-            <div className="lg:col-span-5 relative animate-fade-in">
-              <Card3D />
+            {/* Enhanced Hero Visual with Video and Images */}
+            <div className="lg:col-span-5 relative animate-fade-in space-y-8">
+              {/* Hero Video */}
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-xexon-gold/20 to-yellow-400/20 rounded-3xl blur-lg"></div>
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                  <iframe
+                    src="https://drive.google.com/file/d/1mYTbt9pzyQqBsnrRscAYQ96dSY6hiwsH/preview"
+                    className="w-full h-full"
+                    allow="autoplay"
+                    title="XEXON Hero Demo"
+                  />
+                </div>
+              </div>
+
+              {/* 3D Card */}
+              <div className="max-w-sm mx-auto">
+                <Card3D />
+              </div>
+
+              {/* Professional Images */}
+              <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F9bf4348cc59849228c41bda59add7fc0%2Fc93c7c6ecbb1465c805658641c5ce582?format=webp&width=800"
+                  alt="XEXON Professional User"
+                  className="w-full h-32 object-cover rounded-xl shadow-lg"
+                />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F9bf4348cc59849228c41bda59add7fc0%2F5d296b0d44f848fda1470e359a127682?format=webp&width=800"
+                  alt="XEXON Business User"
+                  className="w-full h-32 object-cover rounded-xl shadow-lg"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -208,24 +238,40 @@ export default function Index() {
 
             {/* Video and Calculator */}
             <div className="lg:col-span-5 space-y-8">
-              {/* Video Container */}
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-xexon-gold/20 to-yellow-400/20 rounded-3xl blur-lg"></div>
-                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
-                  <iframe
-                    src="https://drive.google.com/file/d/1kWYOhy8gwD6A41Tf0aAsjYosQXRsvpd4/preview"
-                    className="w-full h-full"
-                    allow="autoplay"
-                    title="Why XEXON"
-                  />
-                </div>
-                
-                {/* Floating Badge */}
-                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-xexon-gold to-yellow-400 text-black px-6 py-3 rounded-full font-bold shadow-lg animate-pulse-slow">
-                  <div className="flex items-center gap-2">
-                    <Award className="w-5 h-5" />
-                    Award Winning
+              {/* Video Container with Additional Images */}
+              <div className="space-y-6">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-xexon-gold/20 to-yellow-400/20 rounded-3xl blur-lg"></div>
+                  <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+                    <iframe
+                      src="https://drive.google.com/file/d/1kWYOhy8gwD6A41Tf0aAsjYosQXRsvpd4/preview"
+                      className="w-full h-full"
+                      allow="autoplay"
+                      title="Why XEXON"
+                    />
                   </div>
+
+                  {/* Floating Badge */}
+                  <div className="absolute -top-4 -right-4 bg-gradient-to-r from-xexon-gold to-yellow-400 text-black px-6 py-3 rounded-full font-bold shadow-lg animate-pulse-slow">
+                    <div className="flex items-center gap-2">
+                      <Award className="w-5 h-5" />
+                      Award Winning
+                    </div>
+                  </div>
+                </div>
+
+                {/* Professional Usage Images */}
+                <div className="grid grid-cols-2 gap-4">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F9bf4348cc59849228c41bda59add7fc0%2F9d750b2837ef48cbb87f6ffc5cdd13d2?format=webp&width=800"
+                    alt="XEXON Professional Usage"
+                    className="w-full h-24 object-cover rounded-xl shadow-lg"
+                  />
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F9bf4348cc59849228c41bda59add7fc0%2F7c3a9bdd66c2410cb06014c974540136?format=webp&width=800"
+                    alt="XEXON Business Environment"
+                    className="w-full h-24 object-cover rounded-xl shadow-lg"
+                  />
                 </div>
               </div>
 
@@ -336,31 +382,42 @@ export default function Index() {
               ))}
             </div>
 
-            {/* Video and Stats */}
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-xexon-gold/20 to-yellow-400/20 rounded-3xl blur-lg"></div>
-              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/20">
-                <iframe
-                  src="https://drive.google.com/file/d/1y-HGYQSzvPev6RTqutTY1qjYPShVMyOO/preview"
-                  className="w-full h-full"
-                  allow="autoplay"
-                  title="XEXON Real-World Use Cases"
+            {/* Video and Professional Usage */}
+            <div className="relative space-y-6">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-xexon-gold/20 to-yellow-400/20 rounded-3xl blur-lg"></div>
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                  <iframe
+                    src="https://drive.google.com/file/d/1y-HGYQSzvPev6RTqutTY1qjYPShVMyOO/preview"
+                    className="w-full h-full"
+                    allow="autoplay"
+                    title="XEXON Real-World Use Cases"
+                  />
+                </div>
+
+                {/* Enhanced Floating Stats Cards */}
+                <div className="absolute -bottom-6 -left-6 bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
+                  <div className="text-center">
+                    <div className="text-2xl font-black bg-gradient-to-r from-xexon-gold to-yellow-400 bg-clip-text text-transparent">$50B+</div>
+                    <div className="text-xs text-gray-300">Assets Processed</div>
+                  </div>
+                </div>
+
+                <div className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
+                  <div className="text-center">
+                    <div className="text-2xl font-black bg-gradient-to-r from-xexon-gold to-yellow-400 bg-clip-text text-transparent">200+</div>
+                    <div className="text-xs text-gray-300">Countries</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Additional Professional Images */}
+              <div className="relative">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F9bf4348cc59849228c41bda59add7fc0%2F5a9a322e89c244b38f784a54c5285e09?format=webp&width=800"
+                  alt="XEXON Global Reach"
+                  className="w-full h-32 object-cover rounded-xl shadow-lg border border-white/20"
                 />
-              </div>
-
-              {/* Enhanced Floating Stats Cards */}
-              <div className="absolute -bottom-6 -left-6 bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
-                <div className="text-center">
-                  <div className="text-2xl font-black bg-gradient-to-r from-xexon-gold to-yellow-400 bg-clip-text text-transparent">$50B+</div>
-                  <div className="text-xs text-gray-300">Assets Processed</div>
-                </div>
-              </div>
-
-              <div className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
-                <div className="text-center">
-                  <div className="text-2xl font-black bg-gradient-to-r from-xexon-gold to-yellow-400 bg-clip-text text-transparent">200+</div>
-                  <div className="text-xs text-gray-300">Countries</div>
-                </div>
               </div>
             </div>
           </div>
