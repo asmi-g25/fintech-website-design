@@ -41,7 +41,7 @@ export function PricingCalculator() {
               type="number"
               value={amount}
               onChange={(e) => setAmount(Number(e.target.value))}
-              className="w-full bg-white/10 border border-white/20 rounded-xl pl-10 pr-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-xexon-gold transition-colors duration-200"
+              className="w-full bg-gray-900/80 border border-gray-600 rounded-xl pl-10 pr-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-xexon-gold transition-colors duration-200"
               placeholder="Enter amount"
             />
           </div>
@@ -55,7 +55,7 @@ export function PricingCalculator() {
           <select
             value={selectedCurrency}
             onChange={(e) => setSelectedCurrency(e.target.value)}
-            className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-xexon-gold transition-colors duration-200"
+            className="w-full bg-gray-900/80 border border-gray-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-xexon-gold transition-colors duration-200"
           >
             {currencies.map(currency => (
               <option key={currency.symbol} value={currency.symbol} className="bg-gray-800">
@@ -66,7 +66,7 @@ export function PricingCalculator() {
         </div>
 
         {/* Results */}
-        <div className="bg-white/5 rounded-2xl p-6 space-y-4">
+        <div className="bg-gray-900/60 border border-gray-700 rounded-2xl p-6 space-y-4">
           <div className="flex justify-between items-center">
             <span className="text-gray-300">You send:</span>
             <span className="text-white font-semibold">
