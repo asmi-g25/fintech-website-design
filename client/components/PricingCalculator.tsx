@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Calculator, DollarSign, CreditCard, TrendingUp } from 'lucide-react';
 
 export function PricingCalculator() {
