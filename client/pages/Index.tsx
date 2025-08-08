@@ -6,6 +6,11 @@ import { PricingCalculator } from '../components/PricingCalculator';
 import { Testimonials } from '../components/Testimonials';
 import { SecurityBadges } from '../components/SecurityBadges';
 import { LiveSupport } from '../components/LiveSupport';
+import { Card3D } from '../components/Card3D';
+import { PlatformDemo } from '../components/PlatformDemo';
+import { TradingDashboard } from '../components/TradingDashboard';
+import { LiveActivityFeed } from '../components/LiveActivityFeed';
+import { ComparisonTool } from '../components/ComparisonTool';
 
 export default function Index() {
   return (
@@ -46,9 +51,9 @@ export default function Index() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-12 gap-16 items-center">
             {/* Enhanced Hero Content */}
-            <div className="text-center lg:text-left space-y-8 animate-slide-up">
+            <div className="lg:col-span-7 text-center lg:text-left space-y-8 animate-slide-up">
               {/* Premium Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-xexon-gold/20 hover:border-xexon-gold/40 transition-colors duration-300">
                 <Sparkles className="w-4 h-4 text-xexon-gold animate-pulse" />
@@ -56,7 +61,7 @@ export default function Index() {
               </div>
               
               <div className="space-y-6">
-                <h1 className="text-6xl lg:text-8xl font-black text-white leading-none">
+                <h1 className="text-5xl lg:text-7xl font-black text-white leading-none">
                   <span className="block animate-fade-in">Cash Out</span>
                   <span className="block bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent animate-glow">
                     Crypto Assets
@@ -65,10 +70,10 @@ export default function Index() {
                 </h1>
                 
                 <div className="space-y-4 max-w-2xl">
-                  <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed">
+                  <p className="text-lg lg:text-xl text-gray-300 leading-relaxed">
                     Use the <span className="text-xexon-gold font-semibold">Xexon crypto debit card</span> at any Visa, Mastercard, or UnionPay merchant or ATM worldwide.
                   </p>
-                  <p className="text-lg text-gray-400">
+                  <p className="text-base text-gray-400">
                     <span className="text-xexon-gold font-semibold">Plus</span> — Tier-1 offshore bank account, secure crypto wallet, diverse derivatives trading, crypto-backed loans.
                   </p>
                 </div>
@@ -93,60 +98,45 @@ export default function Index() {
               {/* Enhanced Trust Indicators */}
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/10">
                 <div className="text-center group">
-                  <div className="text-2xl lg:text-3xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">$50B+</div>
-                  <div className="text-sm text-gray-400">Assets Secured</div>
+                  <div className="text-xl lg:text-2xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">$50B+</div>
+                  <div className="text-xs text-gray-400">Assets Secured</div>
                 </div>
                 <div className="text-center group">
-                  <div className="text-2xl lg:text-3xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">200+</div>
-                  <div className="text-sm text-gray-400">Countries</div>
+                  <div className="text-xl lg:text-2xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">200+</div>
+                  <div className="text-xs text-gray-400">Countries</div>
                 </div>
                 <div className="text-center group">
-                  <div className="text-2xl lg:text-3xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">99.9%</div>
-                  <div className="text-sm text-gray-400">Uptime</div>
+                  <div className="text-xl lg:text-2xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">99.9%</div>
+                  <div className="text-xs text-gray-400">Uptime</div>
                 </div>
               </div>
             </div>
 
-            {/* Enhanced Hero Visual */}
-            <div className="relative animate-fade-in">
-              {/* Main Video Container */}
-              <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-xexon-gold/20 to-yellow-400/20 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
-                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 group-hover:border-white/20 transition-colors duration-300">
-                  <iframe
-                    src="https://drive.google.com/file/d/1mYTbt9pzyQqBsnrRscAYQ96dSY6hiwsH/preview"
-                    className="w-full h-full"
-                    allow="autoplay"
-                    title="XEXON Hero Demo"
-                  />
-                </div>
-              </div>
-
-              {/* Enhanced Floating Card */}
-              <div className="absolute -top-12 -right-12 z-20 hidden lg:block animate-float">
-                <div className="relative group">
-                  <div className="absolute -inset-2 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-2xl blur-md opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-                  <img 
-                    src="https://cdn.builder.io/api/v1/image/assets%2F9bf4348cc59849228c41bda59add7fc0%2Fa75fded42ac64ccb853d1616d19a2028?format=webp&width=800"
-                    alt="XEXON Debit Card"
-                    className="relative w-56 h-36 object-cover rounded-xl shadow-2xl transform rotate-12 hover:rotate-6 transition-transform duration-300 border border-white/20"
-                  />
-                </div>
-              </div>
-
-              {/* Enhanced Floating Stats */}
-              <div className="absolute -bottom-8 -left-8 z-20 hidden lg:block">
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="text-sm text-gray-300">Live Processing</span>
-                  </div>
-                  <div className="text-2xl font-bold text-white">$2.4M</div>
-                  <div className="text-sm text-gray-400">Today's Volume</div>
-                </div>
-              </div>
+            {/* Enhanced Hero Visual with 3D Card */}
+            <div className="lg:col-span-5 relative animate-fade-in">
+              <Card3D />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Interactive Platform Demo Section */}
+      <section className="py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-xexon-gold font-medium mb-6 border border-white/20">
+              <Smartphone className="w-4 h-4" />
+              Interactive Experience
+            </div>
+            <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
+              Try <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">XEXON</span> Live
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience our platform firsthand with this interactive demo.
+            </p>
+          </div>
+          <PlatformDemo />
         </div>
       </section>
 
@@ -159,10 +149,10 @@ export default function Index() {
               <Star className="w-4 h-4" />
               Why Choose Us
             </div>
-            <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8">
+            <h2 className="text-4xl lg:text-6xl font-black text-gray-900 mb-8">
               Why <span className="bg-gradient-to-r from-xexon-gold to-yellow-600 bg-clip-text text-transparent">Xexon</span>?
             </h2>
-            <p className="text-2xl lg:text-3xl text-gray-700 font-medium max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl lg:text-2xl text-gray-700 font-medium max-w-4xl mx-auto leading-relaxed">
               Grow your wealth <span className="text-xexon-gold">privately</span>—and spend it in the real world.
             </p>
           </div>
@@ -245,6 +235,26 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Trading Dashboard Section */}
+      <section className="py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-xexon-gold font-medium mb-6 border border-white/20">
+              <TrendingUp className="w-4 h-4" />
+              Trading Platform
+            </div>
+            <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
+              Advanced <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">Trading</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional-grade trading tools with real-time market data and advanced analytics.
+            </p>
+          </div>
+          <TradingDashboard />
+        </div>
+      </section>
+
       {/* Real-World Use Cases Section */}
       <section id="use-cases" className="py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-xexon-dark via-black to-xexon-dark-lighter"></div>
@@ -256,10 +266,10 @@ export default function Index() {
               <Globe className="w-4 h-4" />
               Global Solutions
             </div>
-            <h2 className="text-5xl lg:text-7xl font-black text-white mb-8">
+            <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
               Real-World <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">Use Cases</span>
             </h2>
-            <p className="text-2xl lg:text-3xl text-gray-300 font-medium max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl lg:text-2xl text-gray-300 font-medium max-w-4xl mx-auto leading-relaxed">
               Grow wealth offshore, then <span className="text-xexon-gold">wire, swipe, or withdraw</span> cash anytime.
             </p>
           </div>
@@ -301,20 +311,20 @@ export default function Index() {
               ].map((useCase, index) => (
                 <div key={index} className="group relative">
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-2xl opacity-0 group-hover:opacity-50 transition-opacity duration-300 blur"></div>
-                  <div className="relative bg-white/5 backdrop-blur-xl p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300">
-                    <div className="flex items-start gap-6">
-                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${useCase.gradient} flex items-center justify-center shadow-lg flex-shrink-0`}>
-                        <useCase.icon className="w-7 h-7 text-white" />
+                  <div className="relative bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300">
+                    <div className="flex items-start gap-4">
+                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${useCase.gradient} flex items-center justify-center shadow-lg flex-shrink-0`}>
+                        <useCase.icon className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-white mb-4 group-hover:text-xexon-gold transition-colors duration-300">
+                        <h3 className="text-lg font-bold text-white mb-3 group-hover:text-xexon-gold transition-colors duration-300">
                           {useCase.title}
                         </h3>
-                        <ul className="space-y-2">
+                        <ul className="space-y-1">
                           {useCase.items.map((item, itemIndex) => (
-                            <li key={itemIndex} className="flex items-start gap-3 text-gray-300">
-                              <CheckCircle className="w-4 h-4 text-xexon-gold mt-0.5 flex-shrink-0" />
-                              <span className="text-sm leading-relaxed">{item}</span>
+                            <li key={itemIndex} className="flex items-start gap-2 text-gray-300">
+                              <CheckCircle className="w-3 h-3 text-xexon-gold mt-1 flex-shrink-0" />
+                              <span className="text-xs leading-relaxed">{item}</span>
                             </li>
                           ))}
                         </ul>
@@ -338,23 +348,46 @@ export default function Index() {
               </div>
 
               {/* Enhanced Floating Stats Cards */}
-              <div className="absolute -bottom-8 -left-8 bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
+              <div className="absolute -bottom-6 -left-6 bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
                 <div className="text-center">
-                  <div className="text-3xl font-black bg-gradient-to-r from-xexon-gold to-yellow-400 bg-clip-text text-transparent">$50B+</div>
-                  <div className="text-sm text-gray-300">Assets Processed</div>
+                  <div className="text-2xl font-black bg-gradient-to-r from-xexon-gold to-yellow-400 bg-clip-text text-transparent">$50B+</div>
+                  <div className="text-xs text-gray-300">Assets Processed</div>
                 </div>
               </div>
 
-              <div className="absolute -top-8 -right-8 bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
+              <div className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
                 <div className="text-center">
-                  <div className="text-3xl font-black bg-gradient-to-r from-xexon-gold to-yellow-400 bg-clip-text text-transparent">200+</div>
-                  <div className="text-sm text-gray-300">Countries</div>
+                  <div className="text-2xl font-black bg-gradient-to-r from-xexon-gold to-yellow-400 bg-clip-text text-transparent">200+</div>
+                  <div className="text-xs text-gray-300">Countries</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Live Activity Feed Section */}
+      <section className="py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-xexon-gold font-medium mb-6 border border-white/20">
+              <Users className="w-4 h-4" />
+              Global Community
+            </div>
+            <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
+              Join <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">Thousands</span> Worldwide
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See real-time activity from our global community of users.
+            </p>
+          </div>
+          <LiveActivityFeed />
+        </div>
+      </section>
+
+      {/* Comparison Tool Section */}
+      <ComparisonTool />
 
       {/* Testimonials Section */}
       <Testimonials />
