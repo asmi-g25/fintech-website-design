@@ -113,12 +113,12 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Enhanced Hero Visual with Video and Images */}
-            <div className="lg:col-span-5 relative animate-fade-in space-y-8">
-              {/* Hero Video */}
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-xexon-gold/20 to-yellow-400/20 rounded-3xl blur-lg"></div>
-                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+            {/* Enhanced Hero Visual */}
+            <div className="lg:col-span-5 relative animate-fade-in">
+              {/* Main Hero Image/Video Container */}
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-xexon-gold/20 to-yellow-400/20 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 group-hover:border-white/20 transition-colors duration-300">
                   <iframe
                     src="https://drive.google.com/file/d/1mYTbt9pzyQqBsnrRscAYQ96dSY6hiwsH/preview"
                     className="w-full h-full"
@@ -128,23 +128,28 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* 3D Card */}
-              <div className="max-w-sm mx-auto">
-                <Card3D />
+              {/* Enhanced Floating Card */}
+              <div className="absolute -top-12 -right-12 z-20 hidden lg:block animate-float">
+                <div className="relative group">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-2xl blur-md opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F9bf4348cc59849228c41bda59add7fc0%2Fa75fded42ac64ccb853d1616d19a2028?format=webp&width=800"
+                    alt="XEXON Debit Card"
+                    className="relative w-56 h-36 object-cover rounded-xl shadow-2xl transform rotate-12 hover:rotate-6 transition-transform duration-300 border border-white/20"
+                  />
+                </div>
               </div>
 
-              {/* Professional Images */}
-              <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F9bf4348cc59849228c41bda59add7fc0%2Fc93c7c6ecbb1465c805658641c5ce582?format=webp&width=800"
-                  alt="XEXON Professional User"
-                  className="w-full h-32 object-cover rounded-xl shadow-lg"
-                />
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F9bf4348cc59849228c41bda59add7fc0%2F5d296b0d44f848fda1470e359a127682?format=webp&width=800"
-                  alt="XEXON Business User"
-                  className="w-full h-32 object-cover rounded-xl shadow-lg"
-                />
+              {/* Enhanced Floating Stats */}
+              <div className="absolute -bottom-8 -left-8 z-20 hidden lg:block">
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                    <span className="text-sm text-gray-300">Live Processing</span>
+                  </div>
+                  <div className="text-2xl font-bold text-white">$2.4M</div>
+                  <div className="text-sm text-gray-400">Today's Volume</div>
+                </div>
               </div>
             </div>
           </div>
