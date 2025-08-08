@@ -1,3 +1,4 @@
+import React from 'react';
 import { Shield, Lock, Award, CheckCircle2, Globe, UserCheck } from 'lucide-react';
 
 export function SecurityBadges() {
