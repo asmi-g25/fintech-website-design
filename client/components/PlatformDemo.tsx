@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Play, Pause, RotateCcw, Smartphone, CreditCard, TrendingUp, DollarSign, ArrowUpRight, ArrowDownRight } from 'lucide-react';
 
 export function PlatformDemo() {
