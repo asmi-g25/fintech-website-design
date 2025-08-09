@@ -4,16 +4,12 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 interface AnimatedCounterProps {
   target: number;
   duration?: number;
-  suffix?: string;
-  prefix?: string;
   className?: string;
 }
 
-export function AnimatedCounter({ 
-  target, 
-  duration = 2000, 
-  suffix = '', 
-  prefix = '',
+export function AnimatedCounter({
+  target,
+  duration = 2000,
   className = ''
 }: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
@@ -56,7 +52,7 @@ export function AnimatedCounter({
 
   return (
     <span ref={ref} className={className}>
-      {prefix}{count.toLocaleString()}{suffix}
+      {count.toLocaleString()}
     </span>
   );
 }
