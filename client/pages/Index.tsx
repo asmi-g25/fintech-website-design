@@ -315,8 +315,65 @@ export default function Index() {
               Interact with our premium XEXON debit card in stunning 3D.
             </p>
           </div>
-          <div className="max-w-2xl mx-auto">
-            <Card3D />
+          <div className="max-w-4xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-6">
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold text-white mb-4">Physical & Digital Freedom</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-xexon-gold flex-shrink-0" />
+                      <span className="text-gray-300">Contactless payments worldwide</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-xexon-gold flex-shrink-0" />
+                      <span className="text-gray-300">Instant crypto-to-fiat conversion</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-xexon-gold flex-shrink-0" />
+                      <span className="text-gray-300">Anonymous spending globally</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-xexon-gold flex-shrink-0" />
+                      <span className="text-gray-300">Premium metal card design</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                  <h4 className="text-lg font-semibold text-white mb-3">Card Features</h4>
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <div className="text-gray-400">Daily Limit</div>
+                      <div className="text-white font-semibold">$50,000</div>
+                    </div>
+                    <div>
+                      <div className="text-gray-400">ATM Withdrawal</div>
+                      <div className="text-white font-semibold">$5,000</div>
+                    </div>
+                    <div>
+                      <div className="text-gray-400">Supported Cryptos</div>
+                      <div className="text-white font-semibold">15+</div>
+                    </div>
+                    <div>
+                      <div className="text-gray-400">Countries</div>
+                      <div className="text-white font-semibold">200+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative">
+                <Card3D />
+                <div className="absolute -bottom-6 -right-6 bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20">
+                  <div className="flex items-center gap-2 text-green-400 mb-2">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <span className="text-sm font-medium">Card Active</span>
+                  </div>
+                  <div className="text-xs text-gray-400">Ready for global use</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
