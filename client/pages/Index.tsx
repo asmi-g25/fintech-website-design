@@ -122,20 +122,20 @@ export default function Index() {
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/10">
                 <div className="text-center group">
                   <div className="text-xl lg:text-2xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">
-                    <AnimatedCounter target={50} suffix="B+" prefix="$" />
-                  </div>
+                  $<AnimatedCounter target={50} />B+
+                </div>
                   <div className="text-xs text-gray-400">Assets Secured</div>
                 </div>
                 <div className="text-center group">
                   <div className="text-xl lg:text-2xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">
-                    <AnimatedCounter target={200} suffix="+" />
-                  </div>
+                  <AnimatedCounter target={200} />+
+                </div>
                   <div className="text-xs text-gray-400">Countries</div>
                 </div>
                 <div className="text-center group">
                   <div className="text-xl lg:text-2xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">
-                    <AnimatedCounter target={99.9} suffix="%" />
-                  </div>
+                  99.9%
+                </div>
                   <div className="text-xs text-gray-400">Uptime</div>
                 </div>
               </div>
@@ -445,8 +445,8 @@ export default function Index() {
                   <div className="absolute -bottom-6 -left-6 bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
                     <div className="text-center">
                       <div className="text-2xl font-black bg-gradient-to-r from-xexon-gold to-yellow-400 bg-clip-text text-transparent">
-                        <AnimatedCounter target={50} suffix="B+" prefix="$" />
-                      </div>
+                      $<AnimatedCounter target={50} />B+
+                    </div>
                       <div className="text-xs text-gray-300">Assets Processed</div>
                     </div>
                   </div>
@@ -456,8 +456,8 @@ export default function Index() {
                   <div className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
                     <div className="text-center">
                       <div className="text-2xl font-black bg-gradient-to-r from-xexon-gold to-yellow-400 bg-clip-text text-transparent">
-                        <AnimatedCounter target={200} suffix="+" />
-                      </div>
+                      <AnimatedCounter target={200} />+
+                    </div>
                       <div className="text-xs text-gray-300">Countries</div>
                     </div>
                   </div>
