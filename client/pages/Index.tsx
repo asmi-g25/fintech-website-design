@@ -4,10 +4,10 @@ import { Navigation } from '../components/Navigation';
 import { ParticleField } from '../components/ParticleField';
 import { MarketTicker } from '../components/MarketTicker';
 import { PricingCalculator } from '../components/PricingCalculator';
-import { TestimonialsCarousel } from '../components/TestimonialsCarousel';
+import { Testimonials } from '../components/Testimonials';
 import { SecurityBadges } from '../components/SecurityBadges';
 import { LiveSupport } from '../components/LiveSupport';
-import { Enhanced3DCard } from '../components/Enhanced3DCard';
+import { Card3D } from '../components/Card3D';
 import { PlatformDemo } from '../components/PlatformDemo';
 import { TradingDashboard } from '../components/TradingDashboard';
 import { LiveActivityFeed } from '../components/LiveActivityFeed';
@@ -302,15 +302,21 @@ export default function Index() {
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+            <MagneticHover>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-xexon-gold font-medium mb-6 border border-white/20">
+                <CreditCard className="w-4 h-4" />
+                Interactive 3D Experience
+              </div>
+            </MagneticHover>
             <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
               Experience <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">Innovation</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Interact with our premium debit card in full 3D with device orientation support.
+              Interact with our premium XEXON debit card in stunning 3D.
             </p>
           </div>
           <div className="max-w-2xl mx-auto">
-            <Enhanced3DCard />
+            <Card3D />
           </div>
         </div>
       </section>
@@ -487,8 +493,8 @@ export default function Index() {
       {/* Comparison Tool Section */}
       <ComparisonTool />
 
-      {/* Enhanced Testimonials Carousel */}
-      <TestimonialsCarousel />
+      {/* Enhanced Testimonials */}
+      <Testimonials />
 
       {/* Security Badges Section */}
       <SecurityBadges />
