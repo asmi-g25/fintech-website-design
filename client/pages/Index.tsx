@@ -4,18 +4,29 @@ import { Navigation } from '../components/Navigation';
 import { ParticleField } from '../components/ParticleField';
 import { MarketTicker } from '../components/MarketTicker';
 import { PricingCalculator } from '../components/PricingCalculator';
-import { Testimonials } from '../components/Testimonials';
+import { TestimonialsCarousel } from '../components/TestimonialsCarousel';
 import { SecurityBadges } from '../components/SecurityBadges';
 import { LiveSupport } from '../components/LiveSupport';
-import { Card3D } from '../components/Card3D';
+import { Enhanced3DCard } from '../components/Enhanced3DCard';
 import { PlatformDemo } from '../components/PlatformDemo';
 import { TradingDashboard } from '../components/TradingDashboard';
 import { LiveActivityFeed } from '../components/LiveActivityFeed';
 import { ComparisonTool } from '../components/ComparisonTool';
+import { CursorTrail } from '../components/CursorTrail';
+import { ScrollProgress } from '../components/ScrollProgress';
+import { AnimatedCounter } from '../components/AnimatedCounter';
+import { MagneticHover } from '../components/MagneticHover';
+import { ParallaxScroll } from '../components/ParallaxScroll';
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 export default function Index() {
+  const [heroRef, heroInView] = useIntersectionObserver({ threshold: 0.3 });
+  const [whyUsRef, whyUsInView] = useIntersectionObserver({ threshold: 0.3 });
+
   return (
     <div className="min-h-screen bg-black overflow-x-hidden">
+      <CursorTrail />
+      <ScrollProgress />
       <Navigation />
       <ParticleField />
       <LiveSupport />
@@ -26,17 +37,22 @@ export default function Index() {
       </div>
       
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center pt-20">
+      <section ref={heroRef} id="home" className="relative min-h-screen flex items-center justify-center pt-20">
         {/* Enhanced Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-black to-xexon-dark"></div>
           <div className="absolute inset-0 gradient-mesh"></div>
           
-          {/* Enhanced Floating Elements */}
-          <div className="absolute top-20 left-10 w-32 h-32 bg-xexon-gold/10 rounded-full blur-xl animate-pulse-slow"></div>
-          <div className="absolute top-40 right-20 w-24 h-24 bg-xexon-gold/20 rounded-full blur-lg animate-float"></div>
-          <div className="absolute bottom-40 left-20 w-16 h-16 bg-xexon-gold/15 rounded-full blur-md animate-pulse-slow"></div>
-          <div className="absolute top-60 left-1/2 w-20 h-20 bg-xexon-gold/8 rounded-full blur-lg animate-float"></div>
+          {/* Enhanced Floating Elements with Parallax */}
+          <ParallaxScroll speed={0.2} className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-32 h-32 bg-xexon-gold/10 rounded-full blur-xl animate-pulse-slow"></div>
+            <div className="absolute top-40 right-20 w-24 h-24 bg-xexon-gold/20 rounded-full blur-lg animate-float"></div>
+          </ParallaxScroll>
+          
+          <ParallaxScroll speed={0.4} className="absolute inset-0">
+            <div className="absolute bottom-40 left-20 w-16 h-16 bg-xexon-gold/15 rounded-full blur-md animate-pulse-slow"></div>
+            <div className="absolute top-60 left-1/2 w-20 h-20 bg-xexon-gold/8 rounded-full blur-lg animate-float"></div>
+          </ParallaxScroll>
           
           {/* Enhanced Grid Pattern */}
           <div className="absolute inset-0 opacity-[0.03]">
@@ -54,12 +70,14 @@ export default function Index() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="grid lg:grid-cols-12 gap-16 items-center">
             {/* Enhanced Hero Content */}
-            <div className="lg:col-span-7 text-center lg:text-left space-y-8 animate-slide-up">
+            <div className={`lg:col-span-7 text-center lg:text-left space-y-8 transition-all duration-1000 ${heroInView ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-10'}`}>
               {/* Premium Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-xexon-gold/20 hover:border-xexon-gold/40 transition-colors duration-300">
-                <Sparkles className="w-4 h-4 text-xexon-gold animate-pulse" />
-                <span className="text-sm text-gray-300 font-medium">Tier-1 Offshore Banking</span>
-              </div>
+              <MagneticHover>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-xexon-gold/20 hover:border-xexon-gold/40 transition-colors duration-300">
+                  <Sparkles className="w-4 h-4 text-xexon-gold animate-pulse" />
+                  <span className="text-sm text-gray-300 font-medium">Tier-1 Offshore Banking</span>
+                </div>
+              </MagneticHover>
               
               <div className="space-y-6">
                 <h1 className="text-5xl lg:text-7xl font-black text-white leading-none">
@@ -81,41 +99,51 @@ export default function Index() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="group relative bg-gradient-to-r from-xexon-gold to-yellow-400 text-black px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-xexon-gold/25 hover:scale-105 overflow-hidden">
-                  <span className="absolute inset-0 bg-white/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
-                  <span className="relative flex items-center justify-center gap-2">
-                    Get Started Now
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                  </span>
-                </button>
-                <button className="group flex items-center gap-3 px-8 py-4 rounded-2xl border-2 border-white/20 text-white font-semibold text-lg hover:bg-white/5 hover:border-white/40 transition-all duration-300">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
-                    <Play className="w-4 h-4 ml-0.5" />
-                  </div>
-                  Watch Demo
-                </button>
+                <MagneticHover>
+                  <button className="group relative bg-gradient-to-r from-xexon-gold to-yellow-400 text-black px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-xexon-gold/25 hover:scale-105 overflow-hidden">
+                    <span className="absolute inset-0 bg-white/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
+                    <span className="relative flex items-center justify-center gap-2">
+                      Get Started Now
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                    </span>
+                  </button>
+                </MagneticHover>
+                <MagneticHover>
+                  <button className="group flex items-center gap-3 px-8 py-4 rounded-2xl border-2 border-white/20 text-white font-semibold text-lg hover:bg-white/5 hover:border-white/40 transition-all duration-300">
+                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
+                      <Play className="w-4 h-4 ml-0.5" />
+                    </div>
+                    Watch Demo
+                  </button>
+                </MagneticHover>
               </div>
 
-              {/* Enhanced Trust Indicators */}
+              {/* Enhanced Trust Indicators with Animated Counters */}
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/10">
                 <div className="text-center group">
-                  <div className="text-xl lg:text-2xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">$50B+</div>
+                  <div className="text-xl lg:text-2xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">
+                    <AnimatedCounter target={50} suffix="B+" prefix="$" />
+                  </div>
                   <div className="text-xs text-gray-400">Assets Secured</div>
                 </div>
                 <div className="text-center group">
-                  <div className="text-xl lg:text-2xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">200+</div>
+                  <div className="text-xl lg:text-2xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">
+                    <AnimatedCounter target={200} suffix="+" />
+                  </div>
                   <div className="text-xs text-gray-400">Countries</div>
                 </div>
                 <div className="text-center group">
-                  <div className="text-xl lg:text-2xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">99.9%</div>
+                  <div className="text-xl lg:text-2xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">
+                    <AnimatedCounter target={99.9} suffix="%" />
+                  </div>
                   <div className="text-xs text-gray-400">Uptime</div>
                 </div>
               </div>
             </div>
 
             {/* Enhanced Hero Visual */}
-            <div className="lg:col-span-5 relative animate-fade-in">
-              {/* Main Hero Image/Video Container */}
+            <div className={`lg:col-span-5 relative transition-all duration-1000 delay-300 ${heroInView ? 'animate-fade-in opacity-100' : 'opacity-0 translate-y-10'}`}>
+              {/* Main Video Container */}
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-xexon-gold/20 to-yellow-400/20 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
                 <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 group-hover:border-white/20 transition-colors duration-300">
@@ -130,14 +158,16 @@ export default function Index() {
 
               {/* Enhanced Floating Card */}
               <div className="absolute -top-12 -right-12 z-20 hidden lg:block animate-float">
-                <div className="relative group">
-                  <div className="absolute -inset-2 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-2xl blur-md opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F9bf4348cc59849228c41bda59add7fc0%2Fa75fded42ac64ccb853d1616d19a2028?format=webp&width=800"
-                    alt="XEXON Debit Card"
-                    className="relative w-56 h-36 object-cover rounded-xl shadow-2xl transform rotate-12 hover:rotate-6 transition-transform duration-300 border border-white/20 -mt-0.5"
-                  />
-                </div>
+                <MagneticHover strength={0.15}>
+                  <div className="relative group">
+                    <div className="absolute -inset-2 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-2xl blur-md opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                    <img 
+                      src="https://cdn.builder.io/api/v1/image/assets%2F9bf4348cc59849228c41bda59add7fc0%2Fa75fded42ac64ccb853d1616d19a2028?format=webp&width=800"
+                      alt="XEXON Debit Card"
+                      className="relative w-56 h-36 object-cover rounded-xl shadow-2xl transform rotate-12 hover:rotate-6 transition-transform duration-300 border border-white/20 -mt-0.5"
+                    />
+                  </div>
+                </MagneticHover>
               </div>
             </div>
           </div>
@@ -149,10 +179,12 @@ export default function Index() {
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-xexon-gold font-medium mb-6 border border-white/20">
-              <Smartphone className="w-4 h-4" />
-              Interactive Experience
-            </div>
+            <MagneticHover>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-xexon-gold font-medium mb-6 border border-white/20">
+                <Smartphone className="w-4 h-4" />
+                Interactive Experience
+              </div>
+            </MagneticHover>
             <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
               Try <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">XEXON</span> Live
             </h2>
@@ -165,14 +197,16 @@ export default function Index() {
       </section>
 
       {/* Why Xexon Section */}
-      <section id="why-us" className="py-32 relative">
+      <section ref={whyUsRef} id="why-us" className="py-32 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-white"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-xexon-gold/10 text-xexon-gold font-medium mb-6">
-              <Star className="w-4 h-4" />
-              Why Choose Us
-            </div>
+          <div className={`text-center mb-20 transition-all duration-1000 ${whyUsInView ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-10'}`}>
+            <MagneticHover>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-xexon-gold/10 text-xexon-gold font-medium mb-6">
+                <Star className="w-4 h-4" />
+                Why Choose Us
+              </div>
+            </MagneticHover>
             <h2 className="text-4xl lg:text-6xl font-black text-gray-900 mb-8">
               Why <span className="bg-gradient-to-r from-xexon-gold to-yellow-600 bg-clip-text text-transparent">Xexon</span>?
             </h2>
@@ -210,49 +244,50 @@ export default function Index() {
                   color: "from-orange-500 to-red-500"
                 }
               ].map((feature, index) => (
-                <div key={index} className="group relative">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
-                  <div className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:border-white">
-                    <div className="flex items-start gap-6">
-                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center shadow-lg`}>
-                        <feature.icon className="w-7 h-7 text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-xexon-gold transition-colors duration-300">
-                          {feature.title}
-                        </h3>
-                        <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                <MagneticHover key={index}>
+                  <div className="group relative">
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+                    <div className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:border-white">
+                      <div className="flex items-start gap-6">
+                        <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center shadow-lg`}>
+                          <feature.icon className="w-7 h-7 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-xexon-gold transition-colors duration-300">
+                            {feature.title}
+                          </h3>
+                          <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </MagneticHover>
               ))}
             </div>
 
             {/* Video and Calculator */}
             <div className="lg:col-span-5 space-y-8">
-              {/* Video Container with Additional Images */}
-              <div className="space-y-6">
-                <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-xexon-gold/20 to-yellow-400/20 rounded-3xl blur-lg"></div>
-                  <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
-                    <iframe
-                      src="https://drive.google.com/file/d/1kWYOhy8gwD6A41Tf0aAsjYosQXRsvpd4/preview"
-                      className="w-full h-full"
-                      allow="autoplay"
-                      title="Why XEXON"
-                    />
-                  </div>
-
-                  {/* Floating Badge */}
+              {/* Video Container */}
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-xexon-gold/20 to-yellow-400/20 rounded-3xl blur-lg"></div>
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+                  <iframe
+                    src="https://drive.google.com/file/d/1kWYOhy8gwD6A41Tf0aAsjYosQXRsvpd4/preview"
+                    className="w-full h-full"
+                    allow="autoplay"
+                    title="Why XEXON"
+                  />
+                </div>
+                
+                {/* Floating Badge */}
+                <MagneticHover>
                   <div className="absolute -top-4 -right-4 bg-gradient-to-r from-xexon-gold to-yellow-400 text-black px-6 py-3 rounded-full font-bold shadow-lg animate-pulse-slow">
                     <div className="flex items-center gap-2">
                       <Award className="w-5 h-5" />
                       Award Winning
                     </div>
                   </div>
-                </div>
-
+                </MagneticHover>
               </div>
 
               {/* Pricing Calculator */}
@@ -262,15 +297,35 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Enhanced 3D Card Section */}
+      <section className="py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
+              Experience <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">Innovation</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Interact with our premium debit card in full 3D with device orientation support.
+            </p>
+          </div>
+          <div className="max-w-2xl mx-auto">
+            <Enhanced3DCard />
+          </div>
+        </div>
+      </section>
+
       {/* Trading Dashboard Section */}
       <section className="py-32 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-xexon-gold font-medium mb-6 border border-white/20">
-              <TrendingUp className="w-4 h-4" />
-              Trading Platform
-            </div>
+            <MagneticHover>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-xexon-gold font-medium mb-6 border border-white/20">
+                <TrendingUp className="w-4 h-4" />
+                Trading Platform
+              </div>
+            </MagneticHover>
             <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
               Advanced <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">Trading</span>
             </h2>
@@ -289,10 +344,12 @@ export default function Index() {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-xexon-gold font-medium mb-6 border border-white/20">
-              <Globe className="w-4 h-4" />
-              Global Solutions
-            </div>
+            <MagneticHover>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-xexon-gold font-medium mb-6 border border-white/20">
+                <Globe className="w-4 h-4" />
+                Global Solutions
+              </div>
+            </MagneticHover>
             <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
               Real-World <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">Use Cases</span>
             </h2>
@@ -336,33 +393,35 @@ export default function Index() {
                   gradient: "from-yellow-600 to-amber-600"
                 }
               ].map((useCase, index) => (
-                <div key={index} className="group relative">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-2xl opacity-0 group-hover:opacity-50 transition-opacity duration-300 blur"></div>
-                  <div className="relative bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300">
-                    <div className="flex items-start gap-4">
-                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${useCase.gradient} flex items-center justify-center shadow-lg flex-shrink-0`}>
-                        <useCase.icon className="w-6 h-6 text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg font-bold text-white mb-3 group-hover:text-xexon-gold transition-colors duration-300">
-                          {useCase.title}
-                        </h3>
-                        <ul className="space-y-1">
-                          {useCase.items.map((item, itemIndex) => (
-                            <li key={itemIndex} className="flex items-start gap-2 text-gray-300">
-                              <CheckCircle className="w-3 h-3 text-xexon-gold mt-1 flex-shrink-0" />
-                              <span className="text-xs leading-relaxed">{item}</span>
-                            </li>
-                          ))}
-                        </ul>
+                <MagneticHover key={index}>
+                  <div className="group relative">
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-2xl opacity-0 group-hover:opacity-50 transition-opacity duration-300 blur"></div>
+                    <div className="relative bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300">
+                      <div className="flex items-start gap-4">
+                        <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${useCase.gradient} flex items-center justify-center shadow-lg flex-shrink-0`}>
+                          <useCase.icon className="w-6 h-6 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-lg font-bold text-white mb-3 group-hover:text-xexon-gold transition-colors duration-300">
+                            {useCase.title}
+                          </h3>
+                          <ul className="space-y-1">
+                            {useCase.items.map((item, itemIndex) => (
+                              <li key={itemIndex} className="flex items-start gap-2 text-gray-300">
+                                <CheckCircle className="w-3 h-3 text-xexon-gold mt-1 flex-shrink-0" />
+                                <span className="text-xs leading-relaxed">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </MagneticHover>
               ))}
             </div>
 
-            {/* Video and Professional Usage */}
+            {/* Video and Stats */}
             <div className="relative space-y-6">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-xexon-gold/20 to-yellow-400/20 rounded-3xl blur-lg"></div>
@@ -376,21 +435,28 @@ export default function Index() {
                 </div>
 
                 {/* Enhanced Floating Stats Cards */}
-                <div className="absolute -bottom-6 -left-6 bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
-                  <div className="text-center">
-                    <div className="text-2xl font-black bg-gradient-to-r from-xexon-gold to-yellow-400 bg-clip-text text-transparent">$50B+</div>
-                    <div className="text-xs text-gray-300">Assets Processed</div>
+                <MagneticHover>
+                  <div className="absolute -bottom-6 -left-6 bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
+                    <div className="text-center">
+                      <div className="text-2xl font-black bg-gradient-to-r from-xexon-gold to-yellow-400 bg-clip-text text-transparent">
+                        <AnimatedCounter target={50} suffix="B+" prefix="$" />
+                      </div>
+                      <div className="text-xs text-gray-300">Assets Processed</div>
+                    </div>
                   </div>
-                </div>
+                </MagneticHover>
 
-                <div className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
-                  <div className="text-center">
-                    <div className="text-2xl font-black bg-gradient-to-r from-xexon-gold to-yellow-400 bg-clip-text text-transparent">200+</div>
-                    <div className="text-xs text-gray-300">Countries</div>
+                <MagneticHover>
+                  <div className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
+                    <div className="text-center">
+                      <div className="text-2xl font-black bg-gradient-to-r from-xexon-gold to-yellow-400 bg-clip-text text-transparent">
+                        <AnimatedCounter target={200} suffix="+" />
+                      </div>
+                      <div className="text-xs text-gray-300">Countries</div>
+                    </div>
                   </div>
-                </div>
+                </MagneticHover>
               </div>
-
             </div>
           </div>
         </div>
@@ -401,10 +467,12 @@ export default function Index() {
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-xexon-gold font-medium mb-6 border border-white/20">
-              <Users className="w-4 h-4" />
-              Global Community
-            </div>
+            <MagneticHover>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-xexon-gold font-medium mb-6 border border-white/20">
+                <Users className="w-4 h-4" />
+                Global Community
+              </div>
+            </MagneticHover>
             <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
               Join <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">Thousands</span> Worldwide
             </h2>
@@ -419,8 +487,8 @@ export default function Index() {
       {/* Comparison Tool Section */}
       <ComparisonTool />
 
-      {/* Testimonials Section */}
-      <Testimonials />
+      {/* Enhanced Testimonials Carousel */}
+      <TestimonialsCarousel />
 
       {/* Security Badges Section */}
       <SecurityBadges />
@@ -444,9 +512,11 @@ export default function Index() {
                 <div className="font-semibold">Rademan Inc.</div>
                 <div>2 Puddle Dock, London EC4V 3DB, United Kingdom</div>
               </div>
-              <button className="bg-gradient-to-r from-xexon-gold to-yellow-400 text-black px-8 py-3 rounded-xl font-bold hover:shadow-lg hover:shadow-xexon-gold/25 transition-all duration-300 hover:scale-105">
-                Sign In / Sign Up
-              </button>
+              <MagneticHover>
+                <button className="bg-gradient-to-r from-xexon-gold to-yellow-400 text-black px-8 py-3 rounded-xl font-bold hover:shadow-lg hover:shadow-xexon-gold/25 transition-all duration-300 hover:scale-105">
+                  Sign In / Sign Up
+                </button>
+              </MagneticHover>
             </div>
 
             {/* Navigation */}
@@ -455,10 +525,12 @@ export default function Index() {
               <ul className="space-y-3">
                 {['Why Xexon?', 'Real-World Use Cases', 'Pricing', 'Contact'].map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-gray-300 hover:text-xexon-gold transition-colors duration-200 flex items-center gap-2 group">
-                      <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                      {link}
-                    </a>
+                    <MagneticHover>
+                      <a href="#" className="text-gray-300 hover:text-xexon-gold transition-colors duration-200 flex items-center gap-2 group">
+                        <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                        {link}
+                      </a>
+                    </MagneticHover>
                   </li>
                 ))}
               </ul>
