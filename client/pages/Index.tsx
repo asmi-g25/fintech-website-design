@@ -485,6 +485,28 @@ export default function Index() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See real-time activity from our global community of users.
             </p>
+
+            {/* Live Stats Bar */}
+            <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mt-12 mb-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-xexon-gold mb-2">
+                  <AnimatedCounter target={24567} />+
+                </div>
+                <div className="text-sm text-gray-400">Active Users</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-xexon-gold mb-2">
+                  $<AnimatedCounter target={2400} />K
+                </div>
+                <div className="text-sm text-gray-400">Daily Volume</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-xexon-gold mb-2">
+                  <AnimatedCounter target={180} />+
+                </div>
+                <div className="text-sm text-gray-400">Countries</div>
+              </div>
+            </div>
           </div>
           <LiveActivityFeed />
         </div>
@@ -498,6 +520,18 @@ export default function Index() {
 
       {/* Security Badges Section */}
       <SecurityBadges />
+
+      {/* Floating Get Started Button */}
+      <div className="fixed bottom-6 left-6 z-40 hidden lg:block">
+        <MagneticHover>
+          <button className="group bg-gradient-to-r from-xexon-gold to-yellow-400 text-black px-6 py-3 rounded-2xl font-bold shadow-2xl hover:shadow-xexon-gold/25 transition-all duration-300 hover:scale-105 animate-bounce-slow">
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+              Get Started
+            </div>
+          </button>
+        </MagneticHover>
+      </div>
 
       {/* Footer */}
       <footer id="contact" className="relative py-20">
