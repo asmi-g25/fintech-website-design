@@ -1039,6 +1039,371 @@ export default function Index() {
       {/* Enhanced Testimonials */}
       <Testimonials />
 
+      {/* Documentation & API Section */}
+      <section className="py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-white"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <MagneticHover>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-xexon-gold/10 text-xexon-gold font-medium mb-6">
+                <FileText className="w-4 h-4" />
+                Developer Resources
+              </div>
+            </MagneticHover>
+            <h2 className="text-4xl lg:text-6xl font-black text-gray-900 mb-8">
+              Complete <span className="bg-gradient-to-r from-xexon-gold to-yellow-600 bg-clip-text text-transparent">Documentation</span>
+            </h2>
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto">
+              Comprehensive APIs, SDKs, and integration guides for seamless enterprise implementation.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                title: "REST API",
+                description: "Complete RESTful API with 99.99% uptime SLA",
+                features: ["Account Management", "Transaction Processing", "Real-time Webhooks", "Sandbox Environment"],
+                icon: "🔌",
+                status: "v2.1 Stable"
+              },
+              {
+                title: "SDK Libraries",
+                description: "Native libraries for all major programming languages",
+                features: ["Python SDK", "JavaScript/Node.js", "Java Enterprise", "C# .NET Core"],
+                icon: "📚",
+                status: "Latest Release"
+              },
+              {
+                title: "WebHooks",
+                description: "Real-time event notifications for instant updates",
+                features: ["Transaction Events", "Account Updates", "Compliance Alerts", "System Status"],
+                icon: "⚡",
+                status: "Enterprise Ready"
+              }
+            ].map((doc, index) => (
+              <MagneticHover key={index}>
+                <div className="group relative">
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+                  <div className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:border-white">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-4xl">{doc.icon}</div>
+                      <div className="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">
+                        {doc.status}
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{doc.title}</h3>
+                    <p className="text-gray-600 mb-4">{doc.description}</p>
+                    <div className="space-y-2">
+                      {doc.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-xexon-gold" />
+                          <span className="text-sm text-gray-700">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <button className="w-full mt-6 px-4 py-2 bg-xexon-gold/10 hover:bg-xexon-gold/20 text-xexon-gold rounded-xl font-semibold transition-colors duration-300">
+                      View Documentation
+                    </button>
+                  </div>
+                </div>
+              </MagneticHover>
+            ))}
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div className="space-y-8">
+              <h3 className="text-3xl font-bold text-gray-900">Integration Support</h3>
+              <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-200">
+                <h4 className="text-xl font-bold text-gray-900 mb-6">Enterprise Onboarding</h4>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
+                    <div className="w-8 h-8 bg-xexon-gold rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+                    <div>
+                      <div className="font-semibold text-gray-900">Consultation Call</div>
+                      <div className="text-sm text-gray-600">1-hour technical architecture review</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
+                    <div className="w-8 h-8 bg-xexon-gold rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+                    <div>
+                      <div className="font-semibold text-gray-900">Sandbox Access</div>
+                      <div className="text-sm text-gray-600">Full API testing environment</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
+                    <div className="w-8 h-8 bg-xexon-gold rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+                    <div>
+                      <div className="font-semibold text-gray-900">Integration Support</div>
+                      <div className="text-sm text-gray-600">Dedicated engineering team</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
+                    <div className="w-8 h-8 bg-xexon-gold rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
+                    <div>
+                      <div className="font-semibold text-gray-900">Go Live</div>
+                      <div className="text-sm text-gray-600">Production deployment & monitoring</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              <h3 className="text-3xl font-bold text-gray-900">Technical Specifications</h3>
+              <div className="space-y-6">
+                <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-200">
+                  <h4 className="text-lg font-bold text-gray-900 mb-4">API Performance</h4>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <div className="text-gray-600 text-sm">Response Time</div>
+                      <div className="text-2xl font-bold text-xexon-gold">&lt; 50ms</div>
+                    </div>
+                    <div>
+                      <div className="text-gray-600 text-sm">Uptime SLA</div>
+                      <div className="text-2xl font-bold text-xexon-gold">99.99%</div>
+                    </div>
+                    <div>
+                      <div className="text-gray-600 text-sm">Rate Limit</div>
+                      <div className="text-2xl font-bold text-xexon-gold">10K/min</div>
+                    </div>
+                    <div>
+                      <div className="text-gray-600 text-sm">Concurrent</div>
+                      <div className="text-2xl font-bold text-xexon-gold">1M+</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-200">
+                  <h4 className="text-lg font-bold text-gray-900 mb-4">Security Standards</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <Shield className="w-5 h-5 text-xexon-gold" />
+                      <span className="text-gray-700">TLS 1.3 Encryption</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Lock className="w-5 h-5 text-xexon-gold" />
+                      <span className="text-gray-700">OAuth 2.0 + JWT</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <FileCheck className="w-5 h-5 text-xexon-gold" />
+                      <span className="text-gray-700">API Key Management</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Clock className="w-5 h-5 text-xexon-gold" />
+                      <span className="text-gray-700">Request Signing</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="text-center p-6 bg-gradient-to-r from-xexon-gold/10 to-yellow-400/10 rounded-2xl border border-xexon-gold/20">
+                  <h5 className="font-bold text-gray-900 mb-2">Integration Time</h5>
+                  <div className="text-3xl font-black text-xexon-gold mb-1">2-4 Weeks</div>
+                  <div className="text-sm text-gray-600">Full enterprise deployment</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enterprise Support Section */}
+      <section className="py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <MagneticHover>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-xexon-gold font-medium mb-6 border border-white/20">
+                <Phone className="w-4 h-4" />
+                Enterprise Support
+              </div>
+            </MagneticHover>
+            <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
+              24/7 <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">Enterprise</span> Support
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Dedicated support teams, relationship managers, and technical specialists for enterprise clients.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                tier: "Enterprise",
+                price: "Custom",
+                description: "For large organizations and high-volume clients",
+                features: [
+                  "Dedicated relationship manager",
+                  "24/7 priority phone support",
+                  "Custom SLA agreements",
+                  "On-site implementation support",
+                  "Regulatory compliance assistance",
+                  "Custom API development"
+                ],
+                highlight: true
+              },
+              {
+                tier: "Business",
+                price: "$2,500/mo",
+                description: "For growing businesses and mid-market clients",
+                features: [
+                  "Business hours phone support",
+                  "Email support (4-hour SLA)",
+                  "Live chat support",
+                  "Integration assistance",
+                  "Monthly account reviews",
+                  "Training sessions"
+                ],
+                highlight: false
+              },
+              {
+                tier: "Professional",
+                price: "$500/mo",
+                description: "For individual professionals and small teams",
+                features: [
+                  "Email support (24-hour SLA)",
+                  "Live chat support",
+                  "Knowledge base access",
+                  "Community forum",
+                  "Video tutorials",
+                  "API documentation"
+                ],
+                highlight: false
+              }
+            ].map((plan, index) => (
+              <MagneticHover key={index}>
+                <div className={`group relative ${plan.highlight ? 'lg:scale-105' : ''}`}>
+                  {plan.highlight && (
+                    <div className="absolute -inset-1 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-3xl blur-sm opacity-75"></div>
+                  )}
+                  <div className={`relative bg-white/5 backdrop-blur-xl p-8 rounded-2xl border transition-all duration-300 ${
+                    plan.highlight
+                      ? 'border-xexon-gold/50 hover:border-xexon-gold'
+                      : 'border-white/10 hover:border-white/20'
+                  }`}>
+                    {plan.highlight && (
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <div className="bg-gradient-to-r from-xexon-gold to-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold">
+                          Most Popular
+                        </div>
+                      </div>
+                    )}
+                    <div className="text-center mb-6">
+                      <h3 className="text-2xl font-bold text-white mb-2">{plan.tier}</h3>
+                      <div className="text-3xl font-black text-xexon-gold mb-2">{plan.price}</div>
+                      <p className="text-gray-400 text-sm">{plan.description}</p>
+                    </div>
+                    <div className="space-y-3 mb-8">
+                      {plan.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-start gap-3">
+                          <CheckCircle className="w-5 h-5 text-xexon-gold mt-0.5 flex-shrink-0" />
+                          <span className="text-gray-300 text-sm">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <button className={`w-full py-3 rounded-xl font-bold transition-all duration-300 ${
+                      plan.highlight
+                        ? 'bg-gradient-to-r from-xexon-gold to-yellow-400 text-black hover:shadow-lg hover:shadow-xexon-gold/25'
+                        : 'bg-white/10 text-white hover:bg-white/20'
+                    }`}>
+                      {plan.tier === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                    </button>
+                  </div>
+                </div>
+              </MagneticHover>
+            ))}
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div className="space-y-8">
+              <h3 className="text-3xl font-bold text-white">Support Channels</h3>
+              <div className="space-y-4">
+                {[
+                  {
+                    channel: "Phone Support",
+                    availability: "24/7 for Enterprise",
+                    response: "Immediate",
+                    icon: Phone
+                  },
+                  {
+                    channel: "Live Chat",
+                    availability: "Business hours",
+                    response: "&lt; 2 minutes",
+                    icon: Users
+                  },
+                  {
+                    channel: "Email Support",
+                    availability: "24/7",
+                    response: "&lt; 4 hours",
+                    icon: FileText
+                  },
+                  {
+                    channel: "Technical Escalation",
+                    availability: "Enterprise only",
+                    response: "&lt; 30 minutes",
+                    icon: Zap
+                  }
+                ].map((support, index) => (
+                  <div key={index} className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
+                    <div className="w-12 h-12 bg-xexon-gold/20 rounded-xl flex items-center justify-center">
+                      <support.icon className="w-6 h-6 text-xexon-gold" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-white">{support.channel}</h4>
+                      <div className="text-sm text-gray-400">{support.availability}</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-sm text-gray-400">Response</div>
+                      <div className="font-semibold text-xexon-gold" dangerouslySetInnerHTML={{ __html: support.response }}></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              <h3 className="text-3xl font-bold text-white">Global Support Centers</h3>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { city: "London", timezone: "GMT+0", flag: "🇬🇧" },
+                  { city: "New York", timezone: "GMT-5", flag: "🇺🇸" },
+                  { city: "Singapore", timezone: "GMT+8", flag: "🇸🇬" },
+                  { city: "Sydney", timezone: "GMT+10", flag: "🇦🇺" }
+                ].map((office, index) => (
+                  <div key={index} className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
+                    <div className="text-3xl mb-2">{office.flag}</div>
+                    <div className="font-semibold text-white">{office.city}</div>
+                    <div className="text-sm text-gray-400">{office.timezone}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="bg-gradient-to-br from-xexon-gold/10 to-yellow-400/10 rounded-2xl p-6 border border-xexon-gold/20">
+                <h4 className="text-xl font-bold text-white mb-4">Enterprise SLA</h4>
+                <div className="space-y-3">
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Uptime Guarantee</span>
+                    <span className="text-xexon-gold font-bold">99.99%</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Response Time</span>
+                    <span className="text-xexon-gold font-bold">&lt; 15 min</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Resolution Time</span>
+                    <span className="text-xexon-gold font-bold">&lt; 2 hours</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Penalty Credits</span>
+                    <span className="text-xexon-gold font-bold">Available</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Security Badges Section */}
       <SecurityBadges />
 
