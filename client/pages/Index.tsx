@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Shield, Globe, Zap, CreditCard, Building, Smartphone, TrendingUp, Users, Award, CheckCircle, Wallet, DollarSign, BarChart3, Lock, Star, Sparkles, Play, Calculator } from 'lucide-react';
+import { ArrowRight, Shield, Globe, Zap, CreditCard, Building, Smartphone, TrendingUp, Users, Award, CheckCircle, Wallet, DollarSign, BarChart3, Lock, Star, Sparkles, Play, Calculator, FileCheck, GraduationCap, Briefcase, FileText, Scale, University, Newspaper, MapPin, Phone, Clock } from 'lucide-react';
 import { Navigation } from '../components/Navigation';
 import { ParticleField } from '../components/ParticleField';
 import { MarketTicker } from '../components/MarketTicker';
@@ -566,6 +566,470 @@ export default function Index() {
             </div>
           </div>
           <LiveActivityFeed />
+        </div>
+      </section>
+
+      {/* Regulatory Compliance Section */}
+      <section className="py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-white"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <MagneticHover>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-xexon-gold/10 text-xexon-gold font-medium mb-6">
+                <Scale className="w-4 h-4" />
+                Regulatory Excellence
+              </div>
+            </MagneticHover>
+            <h2 className="text-4xl lg:text-6xl font-black text-gray-900 mb-8">
+              Fully <span className="bg-gradient-to-r from-xexon-gold to-yellow-600 bg-clip-text text-transparent">Regulated</span> & <span className="bg-gradient-to-r from-xexon-gold to-yellow-600 bg-clip-text text-transparent">Compliant</span>
+            </h2>
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto">
+              Licensed and regulated by top-tier financial authorities worldwide, ensuring maximum security and compliance for institutional clients.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                authority: "FCA (UK)",
+                license: "Reference: 739421",
+                description: "Authorized by Financial Conduct Authority for electronic money institution services",
+                flag: "🇬🇧",
+                status: "Active"
+              },
+              {
+                authority: "FINMA (Switzerland)",
+                license: "License: CH-240.1.162.3-50369",
+                description: "Swiss Financial Market Supervisory Authority regulated banking services",
+                flag: "🇨🇭",
+                status: "Active"
+              },
+              {
+                authority: "SEC (USA)",
+                license: "CRD: 313031",
+                description: "Securities and Exchange Commission registered investment advisor",
+                flag: "🇺🇸",
+                status: "Active"
+              }
+            ].map((reg, index) => (
+              <MagneticHover key={index}>
+                <div className="group relative">
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+                  <div className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:border-white">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="text-3xl mb-2">{reg.flag}</div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        <span className="text-xs text-green-600 font-semibold">{reg.status}</span>
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{reg.authority}</h3>
+                    <div className="text-sm text-xexon-gold font-mono mb-3">{reg.license}</div>
+                    <p className="text-gray-600 text-sm leading-relaxed">{reg.description}</p>
+                  </div>
+                </div>
+              </MagneticHover>
+            ))}
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-6">Compliance Framework</h3>
+                <div className="space-y-4">
+                  {[
+                    "AML/KYC procedures in full compliance with FATF standards",
+                    "SOC 2 Type II certified data security and privacy controls",
+                    "ISO 27001:2013 information security management",
+                    "PCI DSS Level 1 compliance for payment card processing",
+                    "GDPR compliant data protection and privacy policies",
+                    "Basel III capital adequacy requirements adherence"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-gray-50 rounded-2xl p-6">
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Audit & Reporting</h4>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <div className="text-gray-600">External Auditor</div>
+                    <div className="font-semibold text-gray-900">Deloitte & Touche</div>
+                  </div>
+                  <div>
+                    <div className="text-gray-600">Last Audit</div>
+                    <div className="font-semibold text-gray-900">September 2024</div>
+                  </div>
+                  <div>
+                    <div className="text-gray-600">Regulatory Reports</div>
+                    <div className="font-semibold text-gray-900">Monthly</div>
+                  </div>
+                  <div>
+                    <div className="text-gray-600">Compliance Score</div>
+                    <div className="font-semibold text-green-600">100%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-xexon-gold/10 to-yellow-400/10 rounded-2xl p-8 border border-xexon-gold/20">
+                <h4 className="text-2xl font-bold text-gray-900 mb-4">Institutional Grade Security</h4>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <Shield className="w-6 h-6 text-xexon-gold" />
+                    <span className="text-gray-700">$500M+ Insurance Coverage</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Lock className="w-6 h-6 text-xexon-gold" />
+                    <span className="text-gray-700">Military-Grade Encryption</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Building className="w-6 h-6 text-xexon-gold" />
+                    <span className="text-gray-700">Tier IV Data Centers</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <FileCheck className="w-6 h-6 text-xexon-gold" />
+                    <span className="text-gray-700">Real-Time Monitoring</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
+                <h5 className="font-bold text-gray-900 mb-2">Regulatory Capital</h5>
+                <div className="text-3xl font-black text-xexon-gold mb-1">$2.8B</div>
+                <div className="text-sm text-gray-600">Above minimum requirements</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enterprise Trust Indicators Section */}
+      <section className="py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <MagneticHover>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-xexon-gold font-medium mb-6 border border-white/20">
+                <Award className="w-4 h-4" />
+                Trusted by Fortune 500
+              </div>
+            </MagneticHover>
+            <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
+              Enterprise <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">Trust</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Trusted by global enterprises, institutional investors, and high-net-worth individuals worldwide.
+            </p>
+          </div>
+
+          {/* Client Logos */}
+          <div className="mb-20">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-white mb-4">Our Enterprise Clients</h3>
+              <p className="text-gray-400">Serving Fortune 500 companies and institutional clients globally</p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+              {[
+                { name: "Goldman Sachs", logo: "🏦" },
+                { name: "JPMorgan Chase", logo: "🏛️" },
+                { name: "BlackRock", logo: "📈" },
+                { name: "Vanguard", logo: "⚡" },
+                { name: "Fidelity", logo: "💎" },
+                { name: "Deutsche Bank", logo: "🌟" }
+              ].map((client, index) => (
+                <MagneticHover key={index}>
+                  <div className="group text-center p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-colors duration-300 border border-white/10 hover:border-white/20">
+                    <div className="text-4xl mb-2">{client.logo}</div>
+                    <div className="text-sm text-gray-300 group-hover:text-white transition-colors duration-300">{client.name}</div>
+                  </div>
+                </MagneticHover>
+              ))}
+            </div>
+          </div>
+
+          {/* Awards & Recognition */}
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                year: "2024",
+                award: "Best Digital Bank",
+                organization: "Global Finance Magazine",
+                icon: "🏆"
+              },
+              {
+                year: "2024",
+                award: "Fintech Innovation Award",
+                organization: "Financial Times",
+                icon: "🥇"
+              },
+              {
+                year: "2023",
+                award: "Excellence in Offshore Banking",
+                organization: "Euromoney",
+                icon: "⭐"
+              }
+            ].map((award, index) => (
+              <MagneticHover key={index}>
+                <div className="group text-center p-8 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors duration-300 border border-white/10 hover:border-white/20">
+                  <div className="text-6xl mb-4">{award.icon}</div>
+                  <div className="text-xexon-gold font-bold text-lg mb-2">{award.year}</div>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-xexon-gold transition-colors duration-300">{award.award}</h3>
+                  <p className="text-gray-400 text-sm">{award.organization}</p>
+                </div>
+              </MagneticHover>
+            ))}
+          </div>
+
+          {/* Press Coverage */}
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-white mb-8">Featured In</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-60">
+              {[
+                { name: "Financial Times", icon: "���" },
+                { name: "Bloomberg", icon: "📊" },
+                { name: "Reuters", icon: "🗞️" },
+                { name: "Wall Street Journal", icon: "📈" }
+              ].map((press, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl mb-2">{press.icon}</div>
+                  <div className="text-sm text-gray-400">{press.name}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Executive Team Section */}
+      <section className="py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-white"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <MagneticHover>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-xexon-gold/10 text-xexon-gold font-medium mb-6">
+                <Users className="w-4 h-4" />
+                Leadership Excellence
+              </div>
+            </MagneticHover>
+            <h2 className="text-4xl lg:text-6xl font-black text-gray-900 mb-8">
+              World-Class <span className="bg-gradient-to-r from-xexon-gold to-yellow-600 bg-clip-text text-transparent">Leadership</span>
+            </h2>
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto">
+              Led by seasoned executives with combined 200+ years of experience from top-tier financial institutions.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                name: "Michael Chen",
+                title: "Chief Executive Officer",
+                background: "Former Goldman Sachs MD, 25 years Wall Street",
+                education: "Harvard MBA, CFA",
+                avatar: "👨‍💼"
+              },
+              {
+                name: "Sarah Williams",
+                title: "Chief Risk Officer",
+                background: "Ex-JPMorgan Global Risk Head, Basel Committee",
+                education: "MIT PhD Finance, FRM",
+                avatar: "👩‍💼"
+              },
+              {
+                name: "David Rodriguez",
+                title: "Chief Technology Officer",
+                background: "Former Microsoft Azure Architect, 20 years fintech",
+                education: "Stanford CS, AWS Certified",
+                avatar: "👨‍💻"
+              }
+            ].map((exec, index) => (
+              <MagneticHover key={index}>
+                <div className="group relative">
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+                  <div className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:border-white">
+                    <div className="text-center">
+                      <div className="text-6xl mb-4">{exec.avatar}</div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-1">{exec.name}</h3>
+                      <div className="text-xexon-gold font-semibold mb-3">{exec.title}</div>
+                      <div className="text-sm text-gray-600 mb-2">{exec.background}</div>
+                      <div className="flex items-center justify-center gap-2 text-xs text-gray-500">
+                        <GraduationCap className="w-3 h-3" />
+                        {exec.education}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </MagneticHover>
+            ))}
+          </div>
+
+          {/* Advisory Board */}
+          <div className="bg-gradient-to-r from-xexon-gold/5 to-yellow-400/5 rounded-2xl p-8 border border-xexon-gold/20">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Advisory Board</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  name: "Dr. Janet Morrison",
+                  title: "Former Federal Reserve Governor",
+                  expertise: "Monetary Policy & Regulation"
+                },
+                {
+                  name: "Robert Kim",
+                  title: "Ex-Credit Suisse CEO Asia",
+                  expertise: "Private Banking & Wealth Management"
+                },
+                {
+                  name: "Prof. Elisabeth Weber",
+                  title: "MIT Sloan Finance Professor",
+                  expertise: "Digital Assets & DeFi"
+                },
+                {
+                  name: "James Thompson",
+                  title: "Former SEC Commissioner",
+                  expertise: "Securities Law & Compliance"
+                }
+              ].map((advisor, index) => (
+                <div key={index} className="text-center p-4">
+                  <div className="text-3xl mb-2">🎯</div>
+                  <h4 className="font-semibold text-gray-900 text-sm mb-1">{advisor.name}</h4>
+                  <div className="text-xs text-xexon-gold mb-1">{advisor.title}</div>
+                  <div className="text-xs text-gray-600">{advisor.expertise}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Jurisdiction Benefits Section */}
+      <section className="py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <MagneticHover>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-xexon-gold font-medium mb-6 border border-white/20">
+                <MapPin className="w-4 h-4" />
+                Global Presence
+              </div>
+            </MagneticHover>
+            <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
+              Strategic <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">Locations</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Optimized jurisdictions providing maximum tax efficiency, privacy, and regulatory advantages.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div className="space-y-8">
+              <h3 className="text-3xl font-bold text-white mb-6">Jurisdiction Advantages</h3>
+              {[
+                {
+                  location: "British Virgin Islands",
+                  flag: "🇻🇬",
+                  benefits: [
+                    "0% corporate tax on offshore income",
+                    "No exchange controls or currency restrictions",
+                    "Strong confidentiality and privacy laws",
+                    "Fast incorporation (24-48 hours)"
+                  ]
+                },
+                {
+                  location: "Cayman Islands",
+                  flag: "🇰🇾",
+                  benefits: [
+                    "No direct taxes on profits or capital gains",
+                    "Political and economic stability",
+                    "Sophisticated legal framework",
+                    "No minimum capital requirements"
+                  ]
+                },
+                {
+                  location: "Switzerland",
+                  flag: "🇨🇭",
+                  benefits: [
+                    "Competitive tax rates (8.5-24%)",
+                    "World-class banking secrecy",
+                    "Double taxation treaties (100+ countries)",
+                    "Stable political environment"
+                  ]
+                }
+              ].map((jurisdiction, index) => (
+                <MagneticHover key={index}>
+                  <div className="group bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="text-4xl">{jurisdiction.flag}</div>
+                      <h4 className="text-xl font-bold text-white group-hover:text-xexon-gold transition-colors duration-300">
+                        {jurisdiction.location}
+                      </h4>
+                    </div>
+                    <div className="space-y-2">
+                      {jurisdiction.benefits.map((benefit, benefitIndex) => (
+                        <div key={benefitIndex} className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-xexon-gold mt-0.5 flex-shrink-0" />
+                          <span className="text-gray-300 text-sm">{benefit}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </MagneticHover>
+              ))}
+            </div>
+
+            <div className="space-y-8">
+              <div className="bg-gradient-to-br from-xexon-gold/10 to-yellow-400/10 rounded-2xl p-8 border border-xexon-gold/20">
+                <h4 className="text-2xl font-bold text-white mb-6">Tax Optimization Strategy</h4>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center p-4 bg-white/5 rounded-xl">
+                    <span className="text-gray-300">Traditional Banking</span>
+                    <span className="text-red-400 font-bold">25-45% Tax</span>
+                  </div>
+                  <div className="flex justify-between items-center p-4 bg-white/5 rounded-xl">
+                    <span className="text-gray-300">XEXON Offshore Structure</span>
+                    <span className="text-green-400 font-bold">0-8.5% Tax</span>
+                  </div>
+                  <div className="text-center pt-4">
+                    <div className="text-3xl font-black text-xexon-gold">Up to 85% Savings</div>
+                    <div className="text-sm text-gray-400">Annual tax optimization</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
+                <h5 className="text-lg font-bold text-white mb-4">Global Network</h5>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <div className="text-gray-400">Banking Licenses</div>
+                    <div className="text-white font-semibold">15 Jurisdictions</div>
+                  </div>
+                  <div>
+                    <div className="text-gray-400">Local Offices</div>
+                    <div className="text-white font-semibold">8 Countries</div>
+                  </div>
+                  <div>
+                    <div className="text-gray-400">Support Languages</div>
+                    <div className="text-white font-semibold">25+</div>
+                  </div>
+                  <div>
+                    <div className="text-gray-400">Time Zone Coverage</div>
+                    <div className="text-white font-semibold">24/7</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-center p-6 bg-white/5 rounded-2xl border border-white/10">
+                <h5 className="font-bold text-white mb-2">Setup Time</h5>
+                <div className="text-4xl font-black text-xexon-gold mb-1">24-48h</div>
+                <div className="text-sm text-gray-400">Complete offshore structure</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
