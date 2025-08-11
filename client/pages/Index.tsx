@@ -1076,21 +1076,21 @@ export default function Index() {
                 title: "REST API",
                 description: "Complete RESTful API with 99.99% uptime SLA",
                 features: ["Account Management", "Transaction Processing", "Real-time Webhooks", "Sandbox Environment"],
-                icon: "🔌",
+                icon: "https://images.pexels.com/photos/16592498/pexels-photo-16592498.jpeg",
                 status: "v2.1 Stable"
               },
               {
                 title: "SDK Libraries",
                 description: "Native libraries for all major programming languages",
                 features: ["Python SDK", "JavaScript/Node.js", "Java Enterprise", "C# .NET Core"],
-                icon: "📚",
+                icon: "https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg",
                 status: "Latest Release"
               },
               {
                 title: "WebHooks",
                 description: "Real-time event notifications for instant updates",
                 features: ["Transaction Events", "Account Updates", "Compliance Alerts", "System Status"],
-                icon: "⚡",
+                icon: "https://images.pexels.com/photos/5716001/pexels-photo-5716001.jpeg",
                 status: "Enterprise Ready"
               }
             ].map((doc, index) => (
