@@ -1,23 +1,53 @@
-import React from 'react';
-import { ArrowRight, Shield, Globe, Zap, CreditCard, Building, Smartphone, TrendingUp, Users, Award, CheckCircle, Wallet, DollarSign, BarChart3, Lock, Star, Sparkles, Play, Calculator, FileCheck, GraduationCap, Briefcase, FileText, Scale, University, Newspaper, MapPin, Phone, Clock } from 'lucide-react';
-import { Navigation } from '../components/Navigation';
-import { ParticleField } from '../components/ParticleField';
-import { MarketTicker } from '../components/MarketTicker';
-import { PricingCalculator } from '../components/PricingCalculator';
-import { Testimonials } from '../components/Testimonials';
-import { SecurityBadges } from '../components/SecurityBadges';
-import { LiveSupport } from '../components/LiveSupport';
-import { Card3D } from '../components/Card3D';
-import { PlatformDemo } from '../components/PlatformDemo';
-import { TradingDashboard } from '../components/TradingDashboard';
-import { LiveActivityFeed } from '../components/LiveActivityFeed';
-import { ComparisonTool } from '../components/ComparisonTool';
-import { CursorTrail } from '../components/CursorTrail';
-import { ScrollProgress } from '../components/ScrollProgress';
-import { AnimatedCounter } from '../components/AnimatedCounter';
-import { MagneticHover } from '../components/MagneticHover';
-import { ParallaxScroll } from '../components/ParallaxScroll';
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import React from "react";
+import {
+  ArrowRight,
+  Shield,
+  Globe,
+  Zap,
+  CreditCard,
+  Building,
+  Smartphone,
+  TrendingUp,
+  Users,
+  Award,
+  CheckCircle,
+  Wallet,
+  DollarSign,
+  BarChart3,
+  Lock,
+  Star,
+  Sparkles,
+  Play,
+  Calculator,
+  FileCheck,
+  GraduationCap,
+  Briefcase,
+  FileText,
+  Scale,
+  University,
+  Newspaper,
+  MapPin,
+  Phone,
+  Clock,
+} from "lucide-react";
+import { Navigation } from "../components/Navigation";
+import { ParticleField } from "../components/ParticleField";
+import { MarketTicker } from "../components/MarketTicker";
+import { PricingCalculator } from "../components/PricingCalculator";
+import { Testimonials } from "../components/Testimonials";
+import { SecurityBadges } from "../components/SecurityBadges";
+import { LiveSupport } from "../components/LiveSupport";
+import { Card3D } from "../components/Card3D";
+import { PlatformDemo } from "../components/PlatformDemo";
+import { TradingDashboard } from "../components/TradingDashboard";
+import { LiveActivityFeed } from "../components/LiveActivityFeed";
+import { ComparisonTool } from "../components/ComparisonTool";
+import { CursorTrail } from "../components/CursorTrail";
+import { ScrollProgress } from "../components/ScrollProgress";
+import { AnimatedCounter } from "../components/AnimatedCounter";
+import { MagneticHover } from "../components/MagneticHover";
+import { ParallaxScroll } from "../components/ParallaxScroll";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 export default function Index() {
   const [heroRef, heroInView] = useIntersectionObserver({ threshold: 0.3 });
@@ -30,36 +60,54 @@ export default function Index() {
       <Navigation />
       <ParticleField />
       <LiveSupport />
-      
+
       {/* Market Ticker */}
       <div className="fixed top-16 left-0 right-0 z-40">
         <MarketTicker />
       </div>
-      
+
       {/* Hero Section */}
-      <section ref={heroRef} id="home" className="relative min-h-screen flex items-center justify-center pt-20">
+      <section
+        ref={heroRef}
+        id="home"
+        className="relative min-h-screen flex items-center justify-center pt-20"
+      >
         {/* Enhanced Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-black to-xexon-dark"></div>
           <div className="absolute inset-0 gradient-mesh"></div>
-          
+
           {/* Enhanced Floating Elements with Parallax */}
           <ParallaxScroll speed={0.2} className="absolute inset-0">
             <div className="absolute top-20 left-10 w-32 h-32 bg-xexon-gold/10 rounded-full blur-xl animate-pulse-slow"></div>
             <div className="absolute top-40 right-20 w-24 h-24 bg-xexon-gold/20 rounded-full blur-lg animate-float"></div>
           </ParallaxScroll>
-          
+
           <ParallaxScroll speed={0.4} className="absolute inset-0">
             <div className="absolute bottom-40 left-20 w-16 h-16 bg-xexon-gold/15 rounded-full blur-md animate-pulse-slow"></div>
             <div className="absolute top-60 left-1/2 w-20 h-20 bg-xexon-gold/8 rounded-full blur-lg animate-float"></div>
           </ParallaxScroll>
-          
+
           {/* Enhanced Grid Pattern */}
           <div className="absolute inset-0 opacity-[0.03]">
-            <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <svg
+              className="w-full h-full"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+            >
               <defs>
-                <pattern id="hero-grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                  <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#D4AF37" strokeWidth="0.5"/>
+                <pattern
+                  id="hero-grid"
+                  width="10"
+                  height="10"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path
+                    d="M 10 0 L 0 0 0 10"
+                    fill="none"
+                    stroke="#D4AF37"
+                    strokeWidth="0.5"
+                  />
                 </pattern>
               </defs>
               <rect width="100" height="100" fill="url(#hero-grid)" />
@@ -70,30 +118,43 @@ export default function Index() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="grid lg:grid-cols-12 gap-16 items-center">
             {/* Enhanced Hero Content */}
-            <div className={`lg:col-span-7 text-center lg:text-left space-y-8 transition-all duration-1000 ${heroInView ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-10'}`}>
+            <div
+              className={`lg:col-span-7 text-center lg:text-left space-y-8 transition-all duration-1000 ${heroInView ? "animate-slide-up opacity-100" : "opacity-0 translate-y-10"}`}
+            >
               {/* Premium Badge */}
               <MagneticHover>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-xexon-gold/20 hover:border-xexon-gold/40 transition-colors duration-300">
                   <Sparkles className="w-4 h-4 text-xexon-gold animate-pulse" />
-                  <span className="text-sm text-gray-300 font-medium">Tier-1 Offshore Banking</span>
+                  <span className="text-sm text-gray-300 font-medium">
+                    Tier-1 Offshore Banking
+                  </span>
                 </div>
               </MagneticHover>
-              
+
               <div className="space-y-6">
                 <h1 className="text-5xl lg:text-7xl font-black text-white leading-none">
                   <span className="block animate-fade-in">Cash Out</span>
                   <span className="block bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent animate-glow">
                     Crypto Assets
                   </span>
-                  <span className="block text-white animate-fade-in">Easily</span>
+                  <span className="block text-white animate-fade-in">
+                    Easily
+                  </span>
                 </h1>
-                
+
                 <div className="space-y-4 max-w-2xl">
                   <p className="text-lg lg:text-xl text-gray-300 leading-relaxed">
-                    Use the <span className="text-xexon-gold font-semibold">Xexon crypto debit card</span> at any Visa, Mastercard, or UnionPay merchant or ATM worldwide.
+                    Use the{" "}
+                    <span className="text-xexon-gold font-semibold">
+                      Xexon crypto debit card
+                    </span>{" "}
+                    at any Visa, Mastercard, or UnionPay merchant or ATM
+                    worldwide.
                   </p>
                   <p className="text-base text-gray-400">
-                    <span className="text-xexon-gold font-semibold">Plus</span> — Tier-1 offshore bank account, secure crypto wallet, diverse derivatives trading, crypto-backed loans.
+                    <span className="text-xexon-gold font-semibold">Plus</span>{" "}
+                    — Tier-1 offshore bank account, secure crypto wallet,
+                    diverse derivatives trading, crypto-backed loans.
                   </p>
                 </div>
               </div>
@@ -122,27 +183,30 @@ export default function Index() {
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/10">
                 <div className="text-center group">
                   <div className="text-xl lg:text-2xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">
-                  $<AnimatedCounter target={50} />B+
-                </div>
+                    $<AnimatedCounter target={50} />
+                    B+
+                  </div>
                   <div className="text-xs text-gray-400">Assets Secured</div>
                 </div>
                 <div className="text-center group">
                   <div className="text-xl lg:text-2xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">
-                  <AnimatedCounter target={200} />+
-                </div>
+                    <AnimatedCounter target={200} />+
+                  </div>
                   <div className="text-xs text-gray-400">Countries</div>
                 </div>
                 <div className="text-center group">
                   <div className="text-xl lg:text-2xl font-bold text-xexon-gold group-hover:scale-110 transition-transform duration-300">
-                  99.9%
-                </div>
+                    99.9%
+                  </div>
                   <div className="text-xs text-gray-400">Uptime</div>
                 </div>
               </div>
             </div>
 
             {/* Enhanced Hero Visual */}
-            <div className={`lg:col-span-5 relative transition-all duration-1000 delay-300 ${heroInView ? 'animate-fade-in opacity-100' : 'opacity-0 translate-y-10'}`}>
+            <div
+              className={`lg:col-span-5 relative transition-all duration-1000 delay-300 ${heroInView ? "animate-fade-in opacity-100" : "opacity-0 translate-y-10"}`}
+            >
               {/* Main Video Container */}
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-xexon-gold/20 to-yellow-400/20 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
@@ -161,7 +225,7 @@ export default function Index() {
                 <MagneticHover strength={0.15}>
                   <div className="relative group">
                     <div className="absolute -inset-2 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-2xl blur-md opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-                    <img 
+                    <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F9bf4348cc59849228c41bda59add7fc0%2Fa75fded42ac64ccb853d1616d19a2028?format=webp&width=800"
                       alt="XEXON Debit Card"
                       className="relative w-56 h-36 object-cover rounded-xl shadow-2xl transform rotate-12 hover:rotate-6 transition-transform duration-300 border border-white/20 -mt-0.5"
@@ -186,7 +250,11 @@ export default function Index() {
               </div>
             </MagneticHover>
             <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
-              Try <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">XEXON</span> Live
+              Try{" "}
+              <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">
+                XEXON
+              </span>{" "}
+              Live
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience our platform firsthand with this interactive demo.
@@ -200,7 +268,9 @@ export default function Index() {
       <section ref={whyUsRef} id="why-us" className="py-32 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-white"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-20 transition-all duration-1000 ${whyUsInView ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-10'}`}>
+          <div
+            className={`text-center mb-20 transition-all duration-1000 ${whyUsInView ? "animate-slide-up opacity-100" : "opacity-0 translate-y-10"}`}
+          >
             <MagneticHover>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-xexon-gold/10 text-xexon-gold font-medium mb-6">
                 <Star className="w-4 h-4" />
@@ -208,10 +278,16 @@ export default function Index() {
               </div>
             </MagneticHover>
             <h2 className="text-4xl lg:text-6xl font-black text-gray-900 mb-8">
-              Why <span className="bg-gradient-to-r from-xexon-gold to-yellow-600 bg-clip-text text-transparent">Xexon</span>?
+              Why{" "}
+              <span className="bg-gradient-to-r from-xexon-gold to-yellow-600 bg-clip-text text-transparent">
+                Xexon
+              </span>
+              ?
             </h2>
             <p className="text-xl lg:text-2xl text-gray-700 font-medium max-w-4xl mx-auto leading-relaxed">
-              Grow your wealth <span className="text-xexon-gold">privately</span>—and spend it in the real world.
+              Grow your wealth{" "}
+              <span className="text-xexon-gold">privately</span>—and spend it in
+              the real world.
             </p>
           </div>
 
@@ -222,41 +298,49 @@ export default function Index() {
                 {
                   icon: Building,
                   title: "Tier-1 bank account—even for offshore entities",
-                  description: "Open with simple KYC—no mountains of paperwork, even for BVI, Seychelles, or newly formed companies.",
-                  color: "from-blue-500 to-cyan-500"
+                  description:
+                    "Open with simple KYC—no mountains of paperwork, even for BVI, Seychelles, or newly formed companies.",
+                  color: "from-blue-500 to-cyan-500",
                 },
                 {
                   icon: CreditCard,
                   title: "Anonymous Visa debit card, crypto-funded in seconds",
-                  description: "Convert crypto to USD in a few clicks and pay in 200+ countries. Your bank balance stays ready.",
-                  color: "from-purple-500 to-pink-500"
+                  description:
+                    "Convert crypto to USD in a few clicks and pay in 200+ countries. Your bank balance stays ready.",
+                  color: "from-purple-500 to-pink-500",
                 },
                 {
                   icon: TrendingUp,
                   title: "Private, versatile investing",
-                  description: "From spot to derivatives, we offer a wide range of trades while keeping you discreet—VIPs get bespoke management.",
-                  color: "from-green-500 to-emerald-500"
+                  description:
+                    "From spot to derivatives, we offer a wide range of trades while keeping you discreet—VIPs get bespoke management.",
+                  color: "from-green-500 to-emerald-500",
                 },
                 {
                   icon: BarChart3,
                   title: "One dashboard, all moves",
-                  description: "Wire funds, swap wallets, and load your card—everything online in a single interface.",
-                  color: "from-orange-500 to-red-500"
-                }
+                  description:
+                    "Wire funds, swap wallets, and load your card—everything online in a single interface.",
+                  color: "from-orange-500 to-red-500",
+                },
               ].map((feature, index) => (
                 <MagneticHover key={index}>
                   <div className="group relative">
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
                     <div className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:border-white">
                       <div className="flex items-start gap-6">
-                        <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center shadow-lg`}>
+                        <div
+                          className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center shadow-lg`}
+                        >
                           <feature.icon className="w-7 h-7 text-white" />
                         </div>
                         <div className="flex-1">
                           <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-xexon-gold transition-colors duration-300">
                             {feature.title}
                           </h3>
-                          <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                          <p className="text-gray-600 leading-relaxed">
+                            {feature.description}
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -278,7 +362,7 @@ export default function Index() {
                     title="Why XEXON"
                   />
                 </div>
-                
+
                 {/* Floating Badge */}
                 <MagneticHover>
                   <div className="absolute -top-4 -right-4 bg-gradient-to-r from-xexon-gold to-yellow-400 text-black px-6 py-3 rounded-full font-bold shadow-lg animate-pulse-slow">
@@ -309,7 +393,10 @@ export default function Index() {
               </div>
             </MagneticHover>
             <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
-              Experience <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">Innovation</span>
+              Experience{" "}
+              <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">
+                Innovation
+              </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Interact with our premium XEXON debit card in stunning 3D.
@@ -319,29 +406,41 @@ export default function Index() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-bold text-white mb-4">Physical & Digital Freedom</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    Physical & Digital Freedom
+                  </h3>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-xexon-gold flex-shrink-0" />
-                      <span className="text-gray-300">Contactless payments worldwide</span>
+                      <span className="text-gray-300">
+                        Contactless payments worldwide
+                      </span>
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-xexon-gold flex-shrink-0" />
-                      <span className="text-gray-300">Instant crypto-to-fiat conversion</span>
+                      <span className="text-gray-300">
+                        Instant crypto-to-fiat conversion
+                      </span>
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-xexon-gold flex-shrink-0" />
-                      <span className="text-gray-300">Anonymous spending globally</span>
+                      <span className="text-gray-300">
+                        Anonymous spending globally
+                      </span>
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-xexon-gold flex-shrink-0" />
-                      <span className="text-gray-300">Premium metal card design</span>
+                      <span className="text-gray-300">
+                        Premium metal card design
+                      </span>
                     </div>
                   </div>
                 </div>
 
                 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                  <h4 className="text-lg font-semibold text-white mb-3">Card Features</h4>
+                  <h4 className="text-lg font-semibold text-white mb-3">
+                    Card Features
+                  </h4>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
                       <div className="text-gray-400">Daily Limit</div>
@@ -370,7 +469,9 @@ export default function Index() {
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                     <span className="text-sm font-medium">Card Active</span>
                   </div>
-                  <div className="text-xs text-gray-400">Ready for global use</div>
+                  <div className="text-xs text-gray-400">
+                    Ready for global use
+                  </div>
                 </div>
               </div>
             </div>
@@ -390,10 +491,14 @@ export default function Index() {
               </div>
             </MagneticHover>
             <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
-              Advanced <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">Trading</span>
+              Advanced{" "}
+              <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">
+                Trading
+              </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional-grade trading tools with real-time market data and advanced analytics.
+              Professional-grade trading tools with real-time market data and
+              advanced analytics.
             </p>
           </div>
           <TradingDashboard />
@@ -404,7 +509,7 @@ export default function Index() {
       <section id="use-cases" className="py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-xexon-dark via-black to-xexon-dark-lighter"></div>
         <div className="absolute inset-0 gradient-mesh"></div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <MagneticHover>
@@ -414,10 +519,15 @@ export default function Index() {
               </div>
             </MagneticHover>
             <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
-              Real-World <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">Use Cases</span>
+              Real-World{" "}
+              <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">
+                Use Cases
+              </span>
             </h2>
             <p className="text-xl lg:text-2xl text-gray-300 font-medium max-w-4xl mx-auto leading-relaxed">
-              Grow wealth offshore, then <span className="text-xexon-gold">wire, swipe, or withdraw</span> cash anytime.
+              Grow wealth offshore, then{" "}
+              <span className="text-xexon-gold">wire, swipe, or withdraw</span>{" "}
+              cash anytime.
             </p>
           </div>
 
@@ -428,40 +538,61 @@ export default function Index() {
                 {
                   icon: Building,
                   title: "Offshore Bank Account",
-                  items: ["Open instantly", "Store assets privately", "Buy overseas property via wire transfer", "Purchase yachts, foreign equities, other high-value assets", "Pay international suppliers and B2B invoices"],
-                  gradient: "from-blue-600 to-cyan-600"
+                  items: [
+                    "Open instantly",
+                    "Store assets privately",
+                    "Buy overseas property via wire transfer",
+                    "Purchase yachts, foreign equities, other high-value assets",
+                    "Pay international suppliers and B2B invoices",
+                  ],
+                  gradient: "from-blue-600 to-cyan-600",
                 },
                 {
                   icon: Lock,
                   title: "Secure Crypto Wallet",
-                  items: ["Safeguard your crypto", "Instantly send cross-border payroll and fees", "Swap to USD and top up your card or transfer funds"],
-                  gradient: "from-purple-600 to-pink-600"
+                  items: [
+                    "Safeguard your crypto",
+                    "Instantly send cross-border payroll and fees",
+                    "Swap to USD and top up your card or transfer funds",
+                  ],
+                  gradient: "from-purple-600 to-pink-600",
                 },
                 {
                   icon: CreditCard,
                   title: "Anonymous Visa Debit Card",
-                  items: ["Pay at any Visa merchant worldwide", "Withdraw local currency at ATMs everywhere"],
-                  gradient: "from-green-600 to-emerald-600"
+                  items: [
+                    "Pay at any Visa merchant worldwide",
+                    "Withdraw local currency at ATMs everywhere",
+                  ],
+                  gradient: "from-green-600 to-emerald-600",
                 },
                 {
                   icon: TrendingUp,
                   title: "Trading Platform",
-                  items: ["Spot crypto trading", "Leveraged futures and options", "Arbitrage and position trades to grow your BTC"],
-                  gradient: "from-orange-600 to-red-600"
+                  items: [
+                    "Spot crypto trading",
+                    "Leveraged futures and options",
+                    "Arbitrage and position trades to grow your BTC",
+                  ],
+                  gradient: "from-orange-600 to-red-600",
                 },
                 {
                   icon: DollarSign,
                   title: "Credit Solutions",
-                  items: ["Borrow USD against BTC collateral for working capital or investment"],
-                  gradient: "from-yellow-600 to-amber-600"
-                }
+                  items: [
+                    "Borrow USD against BTC collateral for working capital or investment",
+                  ],
+                  gradient: "from-yellow-600 to-amber-600",
+                },
               ].map((useCase, index) => (
                 <MagneticHover key={index}>
                   <div className="group relative">
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-2xl opacity-0 group-hover:opacity-50 transition-opacity duration-300 blur"></div>
                     <div className="relative bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300">
                       <div className="flex items-start gap-4">
-                        <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${useCase.gradient} flex items-center justify-center shadow-lg flex-shrink-0`}>
+                        <div
+                          className={`w-12 h-12 rounded-xl bg-gradient-to-r ${useCase.gradient} flex items-center justify-center shadow-lg flex-shrink-0`}
+                        >
                           <useCase.icon className="w-6 h-6 text-white" />
                         </div>
                         <div className="flex-1">
@@ -470,9 +601,14 @@ export default function Index() {
                           </h3>
                           <ul className="space-y-1">
                             {useCase.items.map((item, itemIndex) => (
-                              <li key={itemIndex} className="flex items-start gap-2 text-gray-300">
+                              <li
+                                key={itemIndex}
+                                className="flex items-start gap-2 text-gray-300"
+                              >
                                 <CheckCircle className="w-3 h-3 text-xexon-gold mt-1 flex-shrink-0" />
-                                <span className="text-xs leading-relaxed">{item}</span>
+                                <span className="text-xs leading-relaxed">
+                                  {item}
+                                </span>
                               </li>
                             ))}
                           </ul>
@@ -502,9 +638,12 @@ export default function Index() {
                   <div className="absolute -bottom-6 -left-6 bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
                     <div className="text-center">
                       <div className="text-2xl font-black bg-gradient-to-r from-xexon-gold to-yellow-400 bg-clip-text text-transparent">
-                      $<AnimatedCounter target={50} />B+
-                    </div>
-                      <div className="text-xs text-gray-300">Assets Processed</div>
+                        $<AnimatedCounter target={50} />
+                        B+
+                      </div>
+                      <div className="text-xs text-gray-300">
+                        Assets Processed
+                      </div>
                     </div>
                   </div>
                 </MagneticHover>
@@ -513,8 +652,8 @@ export default function Index() {
                   <div className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20 shadow-2xl hover:bg-white/15 transition-colors duration-300">
                     <div className="text-center">
                       <div className="text-2xl font-black bg-gradient-to-r from-xexon-gold to-yellow-400 bg-clip-text text-transparent">
-                      <AnimatedCounter target={200} />+
-                    </div>
+                        <AnimatedCounter target={200} />+
+                      </div>
                       <div className="text-xs text-gray-300">Countries</div>
                     </div>
                   </div>
@@ -537,7 +676,11 @@ export default function Index() {
               </div>
             </MagneticHover>
             <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
-              Join <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">Thousands</span> Worldwide
+              Join{" "}
+              <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">
+                Thousands
+              </span>{" "}
+              Worldwide
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See real-time activity from our global community of users.
@@ -581,10 +724,19 @@ export default function Index() {
               </div>
             </MagneticHover>
             <h2 className="text-4xl lg:text-6xl font-black text-gray-900 mb-8">
-              Fully <span className="bg-gradient-to-r from-xexon-gold to-yellow-600 bg-clip-text text-transparent">Regulated</span> & <span className="bg-gradient-to-r from-xexon-gold to-yellow-600 bg-clip-text text-transparent">Compliant</span>
+              Fully{" "}
+              <span className="bg-gradient-to-r from-xexon-gold to-yellow-600 bg-clip-text text-transparent">
+                Regulated
+              </span>{" "}
+              &{" "}
+              <span className="bg-gradient-to-r from-xexon-gold to-yellow-600 bg-clip-text text-transparent">
+                Compliant
+              </span>
             </h2>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto">
-              Licensed and regulated by top-tier financial authorities worldwide, ensuring maximum security and compliance for institutional clients.
+              Licensed and regulated by top-tier financial authorities
+              worldwide, ensuring maximum security and compliance for
+              institutional clients.
             </p>
           </div>
 
@@ -593,24 +745,27 @@ export default function Index() {
               {
                 authority: "FCA (UK)",
                 license: "Reference: 739421",
-                description: "Authorized by Financial Conduct Authority for electronic money institution services",
+                description:
+                  "Authorized by Financial Conduct Authority for electronic money institution services",
                 flag: "🇬🇧",
-                status: "Active"
+                status: "Active",
               },
               {
                 authority: "FINMA (Switzerland)",
                 license: "License: CH-240.1.162.3-50369",
-                description: "Swiss Financial Market Supervisory Authority regulated banking services",
+                description:
+                  "Swiss Financial Market Supervisory Authority regulated banking services",
                 flag: "🇨🇭",
-                status: "Active"
+                status: "Active",
               },
               {
                 authority: "SEC (USA)",
                 license: "CRD: 313031",
-                description: "Securities and Exchange Commission registered investment advisor",
+                description:
+                  "Securities and Exchange Commission registered investment advisor",
                 flag: "🇺🇸",
-                status: "Active"
-              }
+                status: "Active",
+              },
             ].map((reg, index) => (
               <MagneticHover key={index}>
                 <div className="group relative">
@@ -620,12 +775,20 @@ export default function Index() {
                       <div className="text-3xl mb-2">{reg.flag}</div>
                       <div className="flex items-center gap-2">
                         <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                        <span className="text-xs text-green-600 font-semibold">{reg.status}</span>
+                        <span className="text-xs text-green-600 font-semibold">
+                          {reg.status}
+                        </span>
                       </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{reg.authority}</h3>
-                    <div className="text-sm text-xexon-gold font-mono mb-3">{reg.license}</div>
-                    <p className="text-gray-600 text-sm leading-relaxed">{reg.description}</p>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      {reg.authority}
+                    </h3>
+                    <div className="text-sm text-xexon-gold font-mono mb-3">
+                      {reg.license}
+                    </div>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {reg.description}
+                    </p>
                   </div>
                 </div>
               </MagneticHover>
@@ -635,7 +798,9 @@ export default function Index() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-6">Compliance Framework</h3>
+                <h3 className="text-3xl font-bold text-gray-900 mb-6">
+                  Compliance Framework
+                </h3>
                 <div className="space-y-4">
                   {[
                     "AML/KYC procedures in full compliance with FATF standards",
@@ -643,7 +808,7 @@ export default function Index() {
                     "ISO 27001:2013 information security management",
                     "PCI DSS Level 1 compliance for payment card processing",
                     "GDPR compliant data protection and privacy policies",
-                    "Basel III capital adequacy requirements adherence"
+                    "Basel III capital adequacy requirements adherence",
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
@@ -654,15 +819,21 @@ export default function Index() {
               </div>
 
               <div className="bg-gray-50 rounded-2xl p-6">
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">Audit & Reporting</h4>
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">
+                  Audit & Reporting
+                </h4>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
                     <div className="text-gray-600">External Auditor</div>
-                    <div className="font-semibold text-gray-900">Deloitte & Touche</div>
+                    <div className="font-semibold text-gray-900">
+                      Deloitte & Touche
+                    </div>
                   </div>
                   <div>
                     <div className="text-gray-600">Last Audit</div>
-                    <div className="font-semibold text-gray-900">September 2024</div>
+                    <div className="font-semibold text-gray-900">
+                      September 2024
+                    </div>
                   </div>
                   <div>
                     <div className="text-gray-600">Regulatory Reports</div>
@@ -678,15 +849,21 @@ export default function Index() {
 
             <div className="space-y-6">
               <div className="bg-gradient-to-br from-xexon-gold/10 to-yellow-400/10 rounded-2xl p-8 border border-xexon-gold/20">
-                <h4 className="text-2xl font-bold text-gray-900 mb-4">Institutional Grade Security</h4>
+                <h4 className="text-2xl font-bold text-gray-900 mb-4">
+                  Institutional Grade Security
+                </h4>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Shield className="w-6 h-6 text-xexon-gold" />
-                    <span className="text-gray-700">$500M+ Insurance Coverage</span>
+                    <span className="text-gray-700">
+                      $500M+ Insurance Coverage
+                    </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Lock className="w-6 h-6 text-xexon-gold" />
-                    <span className="text-gray-700">Military-Grade Encryption</span>
+                    <span className="text-gray-700">
+                      Military-Grade Encryption
+                    </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Building className="w-6 h-6 text-xexon-gold" />
@@ -700,9 +877,15 @@ export default function Index() {
               </div>
 
               <div className="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
-                <h5 className="font-bold text-gray-900 mb-2">Regulatory Capital</h5>
-                <div className="text-3xl font-black text-xexon-gold mb-1">$2.8B</div>
-                <div className="text-sm text-gray-600">Above minimum requirements</div>
+                <h5 className="font-bold text-gray-900 mb-2">
+                  Regulatory Capital
+                </h5>
+                <div className="text-3xl font-black text-xexon-gold mb-1">
+                  $2.8B
+                </div>
+                <div className="text-sm text-gray-600">
+                  Above minimum requirements
+                </div>
               </div>
             </div>
           </div>
@@ -721,34 +904,66 @@ export default function Index() {
               </div>
             </MagneticHover>
             <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
-              Enterprise <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">Trust</span>
+              Enterprise{" "}
+              <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">
+                Trust
+              </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Trusted by global enterprises, institutional investors, and high-net-worth individuals worldwide.
+              Trusted by global enterprises, institutional investors, and
+              high-net-worth individuals worldwide.
             </p>
           </div>
 
           {/* Client Logos */}
           <div className="mb-20">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Our Enterprise Clients</h3>
-              <p className="text-gray-400">Serving Fortune 500 companies and institutional clients globally</p>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Our Enterprise Clients
+              </h3>
+              <p className="text-gray-400">
+                Serving Fortune 500 companies and institutional clients globally
+              </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-70 hover:opacity-100 transition-opacity duration-300">
               {[
-                { name: "Goldman Sachs", logo: "https://images.pexels.com/photos/5845517/pexels-photo-5845517.jpeg" },
-                { name: "JPMorgan Chase", logo: "https://images.pexels.com/photos/351264/pexels-photo-351264.jpeg" },
-                { name: "BlackRock", logo: "https://images.pexels.com/photos/936722/pexels-photo-936722.jpeg" },
-                { name: "Vanguard", logo: "https://images.pexels.com/photos/18274050/pexels-photo-18274050.jpeg" },
-                { name: "Fidelity", logo: "https://images.pexels.com/photos/15942552/pexels-photo-15942552.jpeg" },
-                { name: "Deutsche Bank", logo: "https://images.pexels.com/photos/27390161/pexels-photo-27390161.jpeg" }
+                {
+                  name: "Goldman Sachs",
+                  logo: "https://images.pexels.com/photos/5845517/pexels-photo-5845517.jpeg",
+                },
+                {
+                  name: "JPMorgan Chase",
+                  logo: "https://images.pexels.com/photos/351264/pexels-photo-351264.jpeg",
+                },
+                {
+                  name: "BlackRock",
+                  logo: "https://images.pexels.com/photos/936722/pexels-photo-936722.jpeg",
+                },
+                {
+                  name: "Vanguard",
+                  logo: "https://images.pexels.com/photos/18274050/pexels-photo-18274050.jpeg",
+                },
+                {
+                  name: "Fidelity",
+                  logo: "https://images.pexels.com/photos/15942552/pexels-photo-15942552.jpeg",
+                },
+                {
+                  name: "Deutsche Bank",
+                  logo: "https://images.pexels.com/photos/27390161/pexels-photo-27390161.jpeg",
+                },
               ].map((client, index) => (
                 <MagneticHover key={index}>
                   <div className="group text-center p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-colors duration-300 border border-white/10 hover:border-white/20">
                     <div className="w-16 h-12 mx-auto mb-3 rounded-lg overflow-hidden shadow-lg">
-                      <img src={client.logo} alt={client.name} className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+                      <img
+                        src={client.logo}
+                        alt={client.name}
+                        className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                      />
                     </div>
-                    <div className="text-sm text-gray-300 group-hover:text-white transition-colors duration-300">{client.name}</div>
+                    <div className="text-sm text-gray-300 group-hover:text-white transition-colors duration-300">
+                      {client.name}
+                    </div>
                   </div>
                 </MagneticHover>
               ))}
@@ -762,26 +977,30 @@ export default function Index() {
                 year: "2024",
                 award: "Best Digital Bank",
                 organization: "Global Finance Magazine",
-                icon: "🏆"
+                icon: "🏆",
               },
               {
                 year: "2024",
                 award: "Fintech Innovation Award",
                 organization: "Financial Times",
-                icon: "🥇"
+                icon: "🥇",
               },
               {
                 year: "2023",
                 award: "Excellence in Offshore Banking",
                 organization: "Euromoney",
-                icon: "⭐"
-              }
+                icon: "⭐",
+              },
             ].map((award, index) => (
               <MagneticHover key={index}>
                 <div className="group text-center p-8 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors duration-300 border border-white/10 hover:border-white/20">
                   <div className="text-6xl mb-4">{award.icon}</div>
-                  <div className="text-xexon-gold font-bold text-lg mb-2">{award.year}</div>
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-xexon-gold transition-colors duration-300">{award.award}</h3>
+                  <div className="text-xexon-gold font-bold text-lg mb-2">
+                    {award.year}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-xexon-gold transition-colors duration-300">
+                    {award.award}
+                  </h3>
                   <p className="text-gray-400 text-sm">{award.organization}</p>
                 </div>
               </MagneticHover>
@@ -793,14 +1012,30 @@ export default function Index() {
             <h3 className="text-2xl font-bold text-white mb-8">Featured In</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-60">
               {[
-                { name: "Financial Times", icon: "https://images.pexels.com/photos/16592498/pexels-photo-16592498.jpeg" },
-                { name: "Bloomberg", icon: "https://images.pexels.com/photos/5716001/pexels-photo-5716001.jpeg" },
-                { name: "Reuters", icon: "https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg" },
-                { name: "Wall Street Journal", icon: "https://images.pexels.com/photos/210600/pexels-photo-210600.jpeg" }
+                {
+                  name: "Financial Times",
+                  icon: "https://images.pexels.com/photos/16592498/pexels-photo-16592498.jpeg",
+                },
+                {
+                  name: "Bloomberg",
+                  icon: "https://images.pexels.com/photos/5716001/pexels-photo-5716001.jpeg",
+                },
+                {
+                  name: "Reuters",
+                  icon: "https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg",
+                },
+                {
+                  name: "Wall Street Journal",
+                  icon: "https://images.pexels.com/photos/210600/pexels-photo-210600.jpeg",
+                },
               ].map((press, index) => (
                 <div key={index} className="text-center">
                   <div className="w-8 h-8 mx-auto mb-2 rounded overflow-hidden">
-                    <img src={press.icon} alt={press.name} className="w-full h-full object-cover opacity-60" />
+                    <img
+                      src={press.icon}
+                      alt={press.name}
+                      className="w-full h-full object-cover opacity-60"
+                    />
                   </div>
                   <div className="text-sm text-gray-400">{press.name}</div>
                 </div>
@@ -822,10 +1057,14 @@ export default function Index() {
               </div>
             </MagneticHover>
             <h2 className="text-4xl lg:text-6xl font-black text-gray-900 mb-8">
-              World-Class <span className="bg-gradient-to-r from-xexon-gold to-yellow-600 bg-clip-text text-transparent">Leadership</span>
+              World-Class{" "}
+              <span className="bg-gradient-to-r from-xexon-gold to-yellow-600 bg-clip-text text-transparent">
+                Leadership
+              </span>
             </h2>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto">
-              Led by seasoned executives with combined 200+ years of experience from top-tier financial institutions.
+              Led by seasoned executives with combined 200+ years of experience
+              from top-tier financial institutions.
             </p>
           </div>
 
@@ -836,22 +1075,26 @@ export default function Index() {
                 title: "Chief Executive Officer",
                 background: "Former Goldman Sachs MD, 25 years Wall Street",
                 education: "Harvard MBA, CFA",
-                avatar: "https://images.pexels.com/photos/15023413/pexels-photo-15023413.jpeg"
+                avatar:
+                  "https://images.pexels.com/photos/15023413/pexels-photo-15023413.jpeg",
               },
               {
                 name: "Sarah Williams",
                 title: "Chief Risk Officer",
                 background: "Ex-JPMorgan Global Risk Head, Basel Committee",
                 education: "MIT PhD Finance, FRM",
-                avatar: "https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg"
+                avatar:
+                  "https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg",
               },
               {
                 name: "David Rodriguez",
                 title: "Chief Technology Officer",
-                background: "Former Microsoft Azure Architect, 20 years fintech",
+                background:
+                  "Former Microsoft Azure Architect, 20 years fintech",
                 education: "Stanford CS, AWS Certified",
-                avatar: "https://images.pexels.com/photos/5716001/pexels-photo-5716001.jpeg"
-              }
+                avatar:
+                  "https://images.pexels.com/photos/5716001/pexels-photo-5716001.jpeg",
+              },
             ].map((exec, index) => (
               <MagneticHover key={index}>
                 <div className="group relative">
@@ -859,11 +1102,21 @@ export default function Index() {
                   <div className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:border-white">
                     <div className="text-center">
                       <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden shadow-lg">
-                        <img src={exec.avatar} alt={exec.name} className="w-full h-full object-cover" />
+                        <img
+                          src={exec.avatar}
+                          alt={exec.name}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-1">{exec.name}</h3>
-                      <div className="text-xexon-gold font-semibold mb-3">{exec.title}</div>
-                      <div className="text-sm text-gray-600 mb-2">{exec.background}</div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-1">
+                        {exec.name}
+                      </h3>
+                      <div className="text-xexon-gold font-semibold mb-3">
+                        {exec.title}
+                      </div>
+                      <div className="text-sm text-gray-600 mb-2">
+                        {exec.background}
+                      </div>
                       <div className="flex items-center justify-center gap-2 text-xs text-gray-500">
                         <GraduationCap className="w-3 h-3" />
                         {exec.education}
@@ -877,41 +1130,57 @@ export default function Index() {
 
           {/* Advisory Board */}
           <div className="bg-gradient-to-r from-xexon-gold/5 to-yellow-400/5 rounded-2xl p-8 border border-xexon-gold/20">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Advisory Board</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              Advisory Board
+            </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
                   name: "Dr. Janet Morrison",
                   title: "Former Federal Reserve Governor",
                   expertise: "Monetary Policy & Regulation",
-                  avatar: "https://images.pexels.com/photos/4808267/pexels-photo-4808267.jpeg"
+                  avatar:
+                    "https://images.pexels.com/photos/4808267/pexels-photo-4808267.jpeg",
                 },
                 {
                   name: "Robert Kim",
                   title: "Ex-Credit Suisse CEO Asia",
                   expertise: "Private Banking & Wealth Management",
-                  avatar: "https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg"
+                  avatar:
+                    "https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg",
                 },
                 {
                   name: "Prof. Elisabeth Weber",
                   title: "MIT Sloan Finance Professor",
                   expertise: "Digital Assets & DeFi",
-                  avatar: "https://images.pexels.com/photos/210600/pexels-photo-210600.jpeg"
+                  avatar:
+                    "https://images.pexels.com/photos/210600/pexels-photo-210600.jpeg",
                 },
                 {
                   name: "James Thompson",
                   title: "Former SEC Commissioner",
                   expertise: "Securities Law & Compliance",
-                  avatar: "https://images.pexels.com/photos/1119074/pexels-photo-1119074.jpeg"
-                }
+                  avatar:
+                    "https://images.pexels.com/photos/1119074/pexels-photo-1119074.jpeg",
+                },
               ].map((advisor, index) => (
                 <div key={index} className="text-center p-4">
                   <div className="w-10 h-10 mx-auto mb-2 rounded-full overflow-hidden">
-                    <img src={advisor.avatar} alt={advisor.name} className="w-full h-full object-cover" />
+                    <img
+                      src={advisor.avatar}
+                      alt={advisor.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <h4 className="font-semibold text-gray-900 text-sm mb-1">{advisor.name}</h4>
-                  <div className="text-xs text-xexon-gold mb-1">{advisor.title}</div>
-                  <div className="text-xs text-gray-600">{advisor.expertise}</div>
+                  <h4 className="font-semibold text-gray-900 text-sm mb-1">
+                    {advisor.name}
+                  </h4>
+                  <div className="text-xs text-xexon-gold mb-1">
+                    {advisor.title}
+                  </div>
+                  <div className="text-xs text-gray-600">
+                    {advisor.expertise}
+                  </div>
                 </div>
               ))}
             </div>
@@ -931,16 +1200,22 @@ export default function Index() {
               </div>
             </MagneticHover>
             <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
-              Strategic <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">Locations</span>
+              Strategic{" "}
+              <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">
+                Locations
+              </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Optimized jurisdictions providing maximum tax efficiency, privacy, and regulatory advantages.
+              Optimized jurisdictions providing maximum tax efficiency, privacy,
+              and regulatory advantages.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16">
             <div className="space-y-8">
-              <h3 className="text-3xl font-bold text-white mb-6">Jurisdiction Advantages</h3>
+              <h3 className="text-3xl font-bold text-white mb-6">
+                Jurisdiction Advantages
+              </h3>
               {[
                 {
                   location: "British Virgin Islands",
@@ -949,8 +1224,8 @@ export default function Index() {
                     "0% corporate tax on offshore income",
                     "No exchange controls or currency restrictions",
                     "Strong confidentiality and privacy laws",
-                    "Fast incorporation (24-48 hours)"
-                  ]
+                    "Fast incorporation (24-48 hours)",
+                  ],
                 },
                 {
                   location: "Cayman Islands",
@@ -959,8 +1234,8 @@ export default function Index() {
                     "No direct taxes on profits or capital gains",
                     "Political and economic stability",
                     "Sophisticated legal framework",
-                    "No minimum capital requirements"
-                  ]
+                    "No minimum capital requirements",
+                  ],
                 },
                 {
                   location: "Switzerland",
@@ -969,15 +1244,19 @@ export default function Index() {
                     "Competitive tax rates (8.5-24%)",
                     "World-class banking secrecy",
                     "Double taxation treaties (100+ countries)",
-                    "Stable political environment"
-                  ]
-                }
+                    "Stable political environment",
+                  ],
+                },
               ].map((jurisdiction, index) => (
                 <MagneticHover key={index}>
                   <div className="group bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300">
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-12 h-12 rounded-lg overflow-hidden">
-                        <img src={jurisdiction.flag} alt={jurisdiction.location} className="w-full h-full object-cover" />
+                        <img
+                          src={jurisdiction.flag}
+                          alt={jurisdiction.location}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                       <h4 className="text-xl font-bold text-white group-hover:text-xexon-gold transition-colors duration-300">
                         {jurisdiction.location}
@@ -985,9 +1264,14 @@ export default function Index() {
                     </div>
                     <div className="space-y-2">
                       {jurisdiction.benefits.map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-start gap-2">
+                        <div
+                          key={benefitIndex}
+                          className="flex items-start gap-2"
+                        >
                           <CheckCircle className="w-4 h-4 text-xexon-gold mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-300 text-sm">{benefit}</span>
+                          <span className="text-gray-300 text-sm">
+                            {benefit}
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -998,29 +1282,41 @@ export default function Index() {
 
             <div className="space-y-8">
               <div className="bg-gradient-to-br from-xexon-gold/10 to-yellow-400/10 rounded-2xl p-8 border border-xexon-gold/20">
-                <h4 className="text-2xl font-bold text-white mb-6">Tax Optimization Strategy</h4>
+                <h4 className="text-2xl font-bold text-white mb-6">
+                  Tax Optimization Strategy
+                </h4>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center p-4 bg-white/5 rounded-xl">
                     <span className="text-gray-300">Traditional Banking</span>
                     <span className="text-red-400 font-bold">25-45% Tax</span>
                   </div>
                   <div className="flex justify-between items-center p-4 bg-white/5 rounded-xl">
-                    <span className="text-gray-300">XEXON Offshore Structure</span>
+                    <span className="text-gray-300">
+                      XEXON Offshore Structure
+                    </span>
                     <span className="text-green-400 font-bold">0-8.5% Tax</span>
                   </div>
                   <div className="text-center pt-4">
-                    <div className="text-3xl font-black text-xexon-gold">Up to 85% Savings</div>
-                    <div className="text-sm text-gray-400">Annual tax optimization</div>
+                    <div className="text-3xl font-black text-xexon-gold">
+                      Up to 85% Savings
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      Annual tax optimization
+                    </div>
                   </div>
                 </div>
               </div>
 
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
-                <h5 className="text-lg font-bold text-white mb-4">Global Network</h5>
+                <h5 className="text-lg font-bold text-white mb-4">
+                  Global Network
+                </h5>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
                     <div className="text-gray-400">Banking Licenses</div>
-                    <div className="text-white font-semibold">15 Jurisdictions</div>
+                    <div className="text-white font-semibold">
+                      15 Jurisdictions
+                    </div>
                   </div>
                   <div>
                     <div className="text-gray-400">Local Offices</div>
@@ -1039,8 +1335,12 @@ export default function Index() {
 
               <div className="text-center p-6 bg-white/5 rounded-2xl border border-white/10">
                 <h5 className="font-bold text-white mb-2">Setup Time</h5>
-                <div className="text-4xl font-black text-xexon-gold mb-1">24-48h</div>
-                <div className="text-sm text-gray-400">Complete offshore structure</div>
+                <div className="text-4xl font-black text-xexon-gold mb-1">
+                  24-48h
+                </div>
+                <div className="text-sm text-gray-400">
+                  Complete offshore structure
+                </div>
               </div>
             </div>
           </div>
@@ -1065,10 +1365,14 @@ export default function Index() {
               </div>
             </MagneticHover>
             <h2 className="text-4xl lg:text-6xl font-black text-gray-900 mb-8">
-              Complete <span className="bg-gradient-to-r from-xexon-gold to-yellow-600 bg-clip-text text-transparent">Documentation</span>
+              Complete{" "}
+              <span className="bg-gradient-to-r from-xexon-gold to-yellow-600 bg-clip-text text-transparent">
+                Documentation
+              </span>
             </h2>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto">
-              Comprehensive APIs, SDKs, and integration guides for seamless enterprise implementation.
+              Comprehensive APIs, SDKs, and integration guides for seamless
+              enterprise implementation.
             </p>
           </div>
 
@@ -1077,24 +1381,41 @@ export default function Index() {
               {
                 title: "REST API",
                 description: "Complete RESTful API with 99.99% uptime SLA",
-                features: ["Account Management", "Transaction Processing", "Real-time Webhooks", "Sandbox Environment"],
+                features: [
+                  "Account Management",
+                  "Transaction Processing",
+                  "Real-time Webhooks",
+                  "Sandbox Environment",
+                ],
                 icon: "https://images.pexels.com/photos/16592498/pexels-photo-16592498.jpeg",
-                status: "v2.1 Stable"
+                status: "v2.1 Stable",
               },
               {
                 title: "SDK Libraries",
-                description: "Native libraries for all major programming languages",
-                features: ["Python SDK", "JavaScript/Node.js", "Java Enterprise", "C# .NET Core"],
+                description:
+                  "Native libraries for all major programming languages",
+                features: [
+                  "Python SDK",
+                  "JavaScript/Node.js",
+                  "Java Enterprise",
+                  "C# .NET Core",
+                ],
                 icon: "https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg",
-                status: "Latest Release"
+                status: "Latest Release",
               },
               {
                 title: "WebHooks",
-                description: "Real-time event notifications for instant updates",
-                features: ["Transaction Events", "Account Updates", "Compliance Alerts", "System Status"],
+                description:
+                  "Real-time event notifications for instant updates",
+                features: [
+                  "Transaction Events",
+                  "Account Updates",
+                  "Compliance Alerts",
+                  "System Status",
+                ],
                 icon: "https://images.pexels.com/photos/5716001/pexels-photo-5716001.jpeg",
-                status: "Enterprise Ready"
-              }
+                status: "Enterprise Ready",
+              },
             ].map((doc, index) => (
               <MagneticHover key={index}>
                 <div className="group relative">
@@ -1102,19 +1423,30 @@ export default function Index() {
                   <div className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:border-white">
                     <div className="flex items-center justify-between mb-4">
                       <div className="w-16 h-16 rounded-xl overflow-hidden">
-                        <img src={doc.icon} alt={doc.title} className="w-full h-full object-cover" />
+                        <img
+                          src={doc.icon}
+                          alt={doc.title}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                       <div className="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">
                         {doc.status}
                       </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{doc.title}</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                      {doc.title}
+                    </h3>
                     <p className="text-gray-600 mb-4">{doc.description}</p>
                     <div className="space-y-2">
                       {doc.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center gap-2">
+                        <div
+                          key={featureIndex}
+                          className="flex items-center gap-2"
+                        >
                           <CheckCircle className="w-4 h-4 text-xexon-gold" />
-                          <span className="text-sm text-gray-700">{feature}</span>
+                          <span className="text-sm text-gray-700">
+                            {feature}
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -1129,36 +1461,62 @@ export default function Index() {
 
           <div className="grid lg:grid-cols-2 gap-16">
             <div className="space-y-8">
-              <h3 className="text-3xl font-bold text-gray-900">Integration Support</h3>
+              <h3 className="text-3xl font-bold text-gray-900">
+                Integration Support
+              </h3>
               <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-200">
-                <h4 className="text-xl font-bold text-gray-900 mb-6">Enterprise Onboarding</h4>
+                <h4 className="text-xl font-bold text-gray-900 mb-6">
+                  Enterprise Onboarding
+                </h4>
                 <div className="space-y-4">
                   <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
-                    <div className="w-8 h-8 bg-xexon-gold rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+                    <div className="w-8 h-8 bg-xexon-gold rounded-full flex items-center justify-center text-white font-bold text-sm">
+                      1
+                    </div>
                     <div>
-                      <div className="font-semibold text-gray-900">Consultation Call</div>
-                      <div className="text-sm text-gray-600">1-hour technical architecture review</div>
+                      <div className="font-semibold text-gray-900">
+                        Consultation Call
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        1-hour technical architecture review
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
-                    <div className="w-8 h-8 bg-xexon-gold rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+                    <div className="w-8 h-8 bg-xexon-gold rounded-full flex items-center justify-center text-white font-bold text-sm">
+                      2
+                    </div>
                     <div>
-                      <div className="font-semibold text-gray-900">Sandbox Access</div>
-                      <div className="text-sm text-gray-600">Full API testing environment</div>
+                      <div className="font-semibold text-gray-900">
+                        Sandbox Access
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        Full API testing environment
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
-                    <div className="w-8 h-8 bg-xexon-gold rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+                    <div className="w-8 h-8 bg-xexon-gold rounded-full flex items-center justify-center text-white font-bold text-sm">
+                      3
+                    </div>
                     <div>
-                      <div className="font-semibold text-gray-900">Integration Support</div>
-                      <div className="text-sm text-gray-600">Dedicated engineering team</div>
+                      <div className="font-semibold text-gray-900">
+                        Integration Support
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        Dedicated engineering team
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
-                    <div className="w-8 h-8 bg-xexon-gold rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
+                    <div className="w-8 h-8 bg-xexon-gold rounded-full flex items-center justify-center text-white font-bold text-sm">
+                      4
+                    </div>
                     <div>
                       <div className="font-semibold text-gray-900">Go Live</div>
-                      <div className="text-sm text-gray-600">Production deployment & monitoring</div>
+                      <div className="text-sm text-gray-600">
+                        Production deployment & monitoring
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1166,32 +1524,46 @@ export default function Index() {
             </div>
 
             <div className="space-y-8">
-              <h3 className="text-3xl font-bold text-gray-900">Technical Specifications</h3>
+              <h3 className="text-3xl font-bold text-gray-900">
+                Technical Specifications
+              </h3>
               <div className="space-y-6">
                 <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-200">
-                  <h4 className="text-lg font-bold text-gray-900 mb-4">API Performance</h4>
+                  <h4 className="text-lg font-bold text-gray-900 mb-4">
+                    API Performance
+                  </h4>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <div className="text-gray-600 text-sm">Response Time</div>
-                      <div className="text-2xl font-bold text-xexon-gold">&lt; 50ms</div>
+                      <div className="text-2xl font-bold text-xexon-gold">
+                        &lt; 50ms
+                      </div>
                     </div>
                     <div>
                       <div className="text-gray-600 text-sm">Uptime SLA</div>
-                      <div className="text-2xl font-bold text-xexon-gold">99.99%</div>
+                      <div className="text-2xl font-bold text-xexon-gold">
+                        99.99%
+                      </div>
                     </div>
                     <div>
                       <div className="text-gray-600 text-sm">Rate Limit</div>
-                      <div className="text-2xl font-bold text-xexon-gold">10K/min</div>
+                      <div className="text-2xl font-bold text-xexon-gold">
+                        10K/min
+                      </div>
                     </div>
                     <div>
                       <div className="text-gray-600 text-sm">Concurrent</div>
-                      <div className="text-2xl font-bold text-xexon-gold">1M+</div>
+                      <div className="text-2xl font-bold text-xexon-gold">
+                        1M+
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-200">
-                  <h4 className="text-lg font-bold text-gray-900 mb-4">Security Standards</h4>
+                  <h4 className="text-lg font-bold text-gray-900 mb-4">
+                    Security Standards
+                  </h4>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
                       <Shield className="w-5 h-5 text-xexon-gold" />
@@ -1213,9 +1585,15 @@ export default function Index() {
                 </div>
 
                 <div className="text-center p-6 bg-gradient-to-r from-xexon-gold/10 to-yellow-400/10 rounded-2xl border border-xexon-gold/20">
-                  <h5 className="font-bold text-gray-900 mb-2">Integration Time</h5>
-                  <div className="text-3xl font-black text-xexon-gold mb-1">2-4 Weeks</div>
-                  <div className="text-sm text-gray-600">Full enterprise deployment</div>
+                  <h5 className="font-bold text-gray-900 mb-2">
+                    Integration Time
+                  </h5>
+                  <div className="text-3xl font-black text-xexon-gold mb-1">
+                    2-4 Weeks
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    Full enterprise deployment
+                  </div>
                 </div>
               </div>
             </div>
@@ -1235,10 +1613,15 @@ export default function Index() {
               </div>
             </MagneticHover>
             <h2 className="text-4xl lg:text-6xl font-black text-white mb-8">
-              24/7 <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">Enterprise</span> Support
+              24/7{" "}
+              <span className="bg-gradient-to-r from-xexon-gold via-yellow-400 to-xexon-gold bg-clip-text text-transparent">
+                Enterprise
+              </span>{" "}
+              Support
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Dedicated support teams, relationship managers, and technical specialists for enterprise clients.
+              Dedicated support teams, relationship managers, and technical
+              specialists for enterprise clients.
             </p>
           </div>
 
@@ -1254,9 +1637,9 @@ export default function Index() {
                   "Custom SLA agreements",
                   "On-site implementation support",
                   "Regulatory compliance assistance",
-                  "Custom API development"
+                  "Custom API development",
                 ],
-                highlight: true
+                highlight: true,
               },
               {
                 tier: "Business",
@@ -1268,9 +1651,9 @@ export default function Index() {
                   "Live chat support",
                   "Integration assistance",
                   "Monthly account reviews",
-                  "Training sessions"
+                  "Training sessions",
                 ],
-                highlight: false
+                highlight: false,
               },
               {
                 tier: "Professional",
@@ -1282,21 +1665,25 @@ export default function Index() {
                   "Knowledge base access",
                   "Community forum",
                   "Video tutorials",
-                  "API documentation"
+                  "API documentation",
                 ],
-                highlight: false
-              }
+                highlight: false,
+              },
             ].map((plan, index) => (
               <MagneticHover key={index}>
-                <div className={`group relative ${plan.highlight ? 'lg:scale-105' : ''}`}>
+                <div
+                  className={`group relative ${plan.highlight ? "lg:scale-105" : ""}`}
+                >
                   {plan.highlight && (
                     <div className="absolute -inset-1 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-3xl blur-sm opacity-75"></div>
                   )}
-                  <div className={`relative bg-white/5 backdrop-blur-xl p-8 rounded-2xl border transition-all duration-300 ${
-                    plan.highlight
-                      ? 'border-xexon-gold/50 hover:border-xexon-gold'
-                      : 'border-white/10 hover:border-white/20'
-                  }`}>
+                  <div
+                    className={`relative bg-white/5 backdrop-blur-xl p-8 rounded-2xl border transition-all duration-300 ${
+                      plan.highlight
+                        ? "border-xexon-gold/50 hover:border-xexon-gold"
+                        : "border-white/10 hover:border-white/20"
+                    }`}
+                  >
                     {plan.highlight && (
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <div className="bg-gradient-to-r from-xexon-gold to-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold">
@@ -1305,24 +1692,39 @@ export default function Index() {
                       </div>
                     )}
                     <div className="text-center mb-6">
-                      <h3 className="text-2xl font-bold text-white mb-2">{plan.tier}</h3>
-                      <div className="text-3xl font-black text-xexon-gold mb-2">{plan.price}</div>
-                      <p className="text-gray-400 text-sm">{plan.description}</p>
+                      <h3 className="text-2xl font-bold text-white mb-2">
+                        {plan.tier}
+                      </h3>
+                      <div className="text-3xl font-black text-xexon-gold mb-2">
+                        {plan.price}
+                      </div>
+                      <p className="text-gray-400 text-sm">
+                        {plan.description}
+                      </p>
                     </div>
                     <div className="space-y-3 mb-8">
                       {plan.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-start gap-3">
+                        <div
+                          key={featureIndex}
+                          className="flex items-start gap-3"
+                        >
                           <CheckCircle className="w-5 h-5 text-xexon-gold mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-300 text-sm">{feature}</span>
+                          <span className="text-gray-300 text-sm">
+                            {feature}
+                          </span>
                         </div>
                       ))}
                     </div>
-                    <button className={`w-full py-3 rounded-xl font-bold transition-all duration-300 ${
-                      plan.highlight
-                        ? 'bg-gradient-to-r from-xexon-gold to-yellow-400 text-black hover:shadow-lg hover:shadow-xexon-gold/25'
-                        : 'bg-white/10 text-white hover:bg-white/20'
-                    }`}>
-                      {plan.tier === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                    <button
+                      className={`w-full py-3 rounded-xl font-bold transition-all duration-300 ${
+                        plan.highlight
+                          ? "bg-gradient-to-r from-xexon-gold to-yellow-400 text-black hover:shadow-lg hover:shadow-xexon-gold/25"
+                          : "bg-white/10 text-white hover:bg-white/20"
+                      }`}
+                    >
+                      {plan.tier === "Enterprise"
+                        ? "Contact Sales"
+                        : "Get Started"}
                     </button>
                   </div>
                 </div>
@@ -1332,45 +1734,57 @@ export default function Index() {
 
           <div className="grid lg:grid-cols-2 gap-16">
             <div className="space-y-8">
-              <h3 className="text-3xl font-bold text-white">Support Channels</h3>
+              <h3 className="text-3xl font-bold text-white">
+                Support Channels
+              </h3>
               <div className="space-y-4">
                 {[
                   {
                     channel: "Phone Support",
                     availability: "24/7 for Enterprise",
                     response: "Immediate",
-                    icon: Phone
+                    icon: Phone,
                   },
                   {
                     channel: "Live Chat",
                     availability: "Business hours",
                     response: "&lt; 2 minutes",
-                    icon: Users
+                    icon: Users,
                   },
                   {
                     channel: "Email Support",
                     availability: "24/7",
                     response: "&lt; 4 hours",
-                    icon: FileText
+                    icon: FileText,
                   },
                   {
                     channel: "Technical Escalation",
                     availability: "Enterprise only",
                     response: "&lt; 30 minutes",
-                    icon: Zap
-                  }
+                    icon: Zap,
+                  },
                 ].map((support, index) => (
-                  <div key={index} className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
+                  <div
+                    key={index}
+                    className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10"
+                  >
                     <div className="w-12 h-12 bg-xexon-gold/20 rounded-xl flex items-center justify-center">
                       <support.icon className="w-6 h-6 text-xexon-gold" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-semibold text-white">{support.channel}</h4>
-                      <div className="text-sm text-gray-400">{support.availability}</div>
+                      <h4 className="font-semibold text-white">
+                        {support.channel}
+                      </h4>
+                      <div className="text-sm text-gray-400">
+                        {support.availability}
+                      </div>
                     </div>
                     <div className="text-right">
                       <div className="text-sm text-gray-400">Response</div>
-                      <div className="font-semibold text-xexon-gold" dangerouslySetInnerHTML={{ __html: support.response }}></div>
+                      <div
+                        className="font-semibold text-xexon-gold"
+                        dangerouslySetInnerHTML={{ __html: support.response }}
+                      ></div>
                     </div>
                   </div>
                 ))}
@@ -1378,26 +1792,57 @@ export default function Index() {
             </div>
 
             <div className="space-y-8">
-              <h3 className="text-3xl font-bold text-white">Global Support Centers</h3>
+              <h3 className="text-3xl font-bold text-white">
+                Global Support Centers
+              </h3>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { city: "London", timezone: "GMT+0", flag: "https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg" },
-                  { city: "New York", timezone: "GMT-5", flag: "https://images.pexels.com/photos/1119074/pexels-photo-1119074.jpeg" },
-                  { city: "Singapore", timezone: "GMT+8", flag: "https://images.pexels.com/photos/4808267/pexels-photo-4808267.jpeg" },
-                  { city: "Sydney", timezone: "GMT+10", flag: "https://images.pexels.com/photos/5716001/pexels-photo-5716001.jpeg" }
+                  {
+                    city: "London",
+                    timezone: "GMT+0",
+                    flag: "https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg",
+                  },
+                  {
+                    city: "New York",
+                    timezone: "GMT-5",
+                    flag: "https://images.pexels.com/photos/1119074/pexels-photo-1119074.jpeg",
+                  },
+                  {
+                    city: "Singapore",
+                    timezone: "GMT+8",
+                    flag: "https://images.pexels.com/photos/4808267/pexels-photo-4808267.jpeg",
+                  },
+                  {
+                    city: "Sydney",
+                    timezone: "GMT+10",
+                    flag: "https://images.pexels.com/photos/5716001/pexels-photo-5716001.jpeg",
+                  },
                 ].map((office, index) => (
-                  <div key={index} className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
+                  <div
+                    key={index}
+                    className="text-center p-4 bg-white/5 rounded-xl border border-white/10"
+                  >
                     <div className="w-12 h-12 mx-auto mb-2 rounded-lg overflow-hidden">
-                      <img src={office.flag} alt={office.city} className="w-full h-full object-cover" />
+                      <img
+                        src={office.flag}
+                        alt={office.city}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                    <div className="font-semibold text-white">{office.city}</div>
-                    <div className="text-sm text-gray-400">{office.timezone}</div>
+                    <div className="font-semibold text-white">
+                      {office.city}
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      {office.timezone}
+                    </div>
                   </div>
                 ))}
               </div>
 
               <div className="bg-gradient-to-br from-xexon-gold/10 to-yellow-400/10 rounded-2xl p-6 border border-xexon-gold/20">
-                <h4 className="text-xl font-bold text-white mb-4">Enterprise SLA</h4>
+                <h4 className="text-xl font-bold text-white mb-4">
+                  Enterprise SLA
+                </h4>
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-gray-300">Uptime Guarantee</span>
@@ -1405,11 +1850,15 @@ export default function Index() {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-300">Response Time</span>
-                    <span className="text-xexon-gold font-bold">&lt; 15 min</span>
+                    <span className="text-xexon-gold font-bold">
+                      &lt; 15 min
+                    </span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-300">Resolution Time</span>
-                    <span className="text-xexon-gold font-bold">&lt; 2 hours</span>
+                    <span className="text-xexon-gold font-bold">
+                      &lt; 2 hours
+                    </span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-300">Penalty Credits</span>
@@ -1444,13 +1893,14 @@ export default function Index() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Company Info */}
             <div className="lg:col-span-2 space-y-6">
-              <img 
-                src="https://cdn.builder.io/api/v1/image/assets%2F9bf4348cc59849228c41bda59add7fc0%2F21755e85cb9f4d28b8c29d8b94b5a628?format=webp&width=800" 
-                alt="XEXON" 
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F9bf4348cc59849228c41bda59add7fc0%2F21755e85cb9f4d28b8c29d8b94b5a628?format=webp&width=800"
+                alt="XEXON"
                 className="h-10 w-auto"
               />
               <p className="text-gray-300 text-lg leading-relaxed max-w-md">
-                Leading the future of digital finance with innovative solutions for global wealth management and offshore banking.
+                Leading the future of digital finance with innovative solutions
+                for global wealth management and offshore banking.
               </p>
               <div className="space-y-3 text-gray-400">
                 <div className="font-semibold">Rademan Inc.</div>
@@ -1467,10 +1917,18 @@ export default function Index() {
             <div>
               <h3 className="text-xl font-bold text-white mb-6">Navigation</h3>
               <ul className="space-y-3">
-                {['Why Xexon?', 'Real-World Use Cases', 'Pricing', 'Contact'].map((link) => (
+                {[
+                  "Why Xexon?",
+                  "Real-World Use Cases",
+                  "Pricing",
+                  "Contact",
+                ].map((link) => (
                   <li key={link}>
                     <MagneticHover>
-                      <a href="#" className="text-gray-300 hover:text-xexon-gold transition-colors duration-200 flex items-center gap-2 group">
+                      <a
+                        href="#"
+                        className="text-gray-300 hover:text-xexon-gold transition-colors duration-200 flex items-center gap-2 group"
+                      >
                         <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                         {link}
                       </a>
@@ -1484,7 +1942,10 @@ export default function Index() {
             <div>
               <h3 className="text-xl font-bold text-white mb-6">Contact</h3>
               <div className="space-y-3">
-                <a href="mailto:support@xexon.com" className="text-gray-300 hover:text-xexon-gold transition-colors duration-200 block">
+                <a
+                  href="mailto:support@xexon.com"
+                  className="text-gray-300 hover:text-xexon-gold transition-colors duration-200 block"
+                >
                   support@xexon.com
                 </a>
                 <div className="text-gray-400">24/7 Global Support</div>
@@ -1498,7 +1959,8 @@ export default function Index() {
 
           <div className="border-t border-white/10 mt-16 pt-8 text-center">
             <p className="text-gray-400">
-              © 2024 XEXON. All rights reserved. | Built for the future of finance.
+              © 2024 XEXON. All rights reserved. | Built for the future of
+              finance.
             </p>
           </div>
         </div>
