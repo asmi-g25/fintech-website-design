@@ -974,7 +974,9 @@ export default function Index() {
                 <MagneticHover key={index}>
                   <div className="group bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="text-4xl">{jurisdiction.flag}</div>
+                      <div className="w-12 h-12 rounded-lg overflow-hidden">
+                        <img src={jurisdiction.flag} alt={jurisdiction.location} className="w-full h-full object-cover" />
+                      </div>
                       <h4 className="text-xl font-bold text-white group-hover:text-xexon-gold transition-colors duration-300">
                         {jurisdiction.location}
                       </h4>
