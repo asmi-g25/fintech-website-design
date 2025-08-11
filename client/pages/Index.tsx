@@ -760,7 +760,7 @@ export default function Index() {
                 year: "2024",
                 award: "Best Digital Bank",
                 organization: "Global Finance Magazine",
-                icon: "🏆"
+                icon: "��"
               },
               {
                 year: "2024",
@@ -834,21 +834,21 @@ export default function Index() {
                 title: "Chief Executive Officer",
                 background: "Former Goldman Sachs MD, 25 years Wall Street",
                 education: "Harvard MBA, CFA",
-                avatar: "👨‍💼"
+                avatar: "https://images.pexels.com/photos/15023413/pexels-photo-15023413.jpeg"
               },
               {
                 name: "Sarah Williams",
                 title: "Chief Risk Officer",
                 background: "Ex-JPMorgan Global Risk Head, Basel Committee",
                 education: "MIT PhD Finance, FRM",
-                avatar: "👩‍💼"
+                avatar: "https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg"
               },
               {
                 name: "David Rodriguez",
                 title: "Chief Technology Officer",
                 background: "Former Microsoft Azure Architect, 20 years fintech",
                 education: "Stanford CS, AWS Certified",
-                avatar: "👨‍💻"
+                avatar: "https://images.pexels.com/photos/5716001/pexels-photo-5716001.jpeg"
               }
             ].map((exec, index) => (
               <MagneticHover key={index}>
@@ -1370,7 +1370,7 @@ export default function Index() {
                   { city: "London", timezone: "GMT+0", flag: "🇬🇧" },
                   { city: "New York", timezone: "GMT-5", flag: "🇺🇸" },
                   { city: "Singapore", timezone: "GMT+8", flag: "🇸🇬" },
-                  { city: "Sydney", timezone: "GMT+10", flag: "🇦🇺" }
+                  { city: "Sydney", timezone: "GMT+10", flag: "��🇺" }
                 ].map((office, index) => (
                   <div key={index} className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
                     <div className="text-3xl mb-2">{office.flag}</div>
