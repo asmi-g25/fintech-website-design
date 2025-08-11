@@ -1379,13 +1379,15 @@ export default function Index() {
               <h3 className="text-3xl font-bold text-white">Global Support Centers</h3>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { city: "London", timezone: "GMT+0", flag: "🇬🇧" },
-                  { city: "New York", timezone: "GMT-5", flag: "🇺🇸" },
-                  { city: "Singapore", timezone: "GMT+8", flag: "🇸🇬" },
-                  { city: "Sydney", timezone: "GMT+10", flag: "🇦🇺" }
+                  { city: "London", timezone: "GMT+0", flag: "https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg" },
+                  { city: "New York", timezone: "GMT-5", flag: "https://images.pexels.com/photos/1119074/pexels-photo-1119074.jpeg" },
+                  { city: "Singapore", timezone: "GMT+8", flag: "https://images.pexels.com/photos/4808267/pexels-photo-4808267.jpeg" },
+                  { city: "Sydney", timezone: "GMT+10", flag: "https://images.pexels.com/photos/5716001/pexels-photo-5716001.jpeg" }
                 ].map((office, index) => (
                   <div key={index} className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
-                    <div className="text-3xl mb-2">{office.flag}</div>
+                    <div className="w-12 h-12 mx-auto mb-2 rounded-lg overflow-hidden">
+                      <img src={office.flag} alt={office.city} className="w-full h-full object-cover" />
+                    </div>
                     <div className="font-semibold text-white">{office.city}</div>
                     <div className="text-sm text-gray-400">{office.timezone}</div>
                   </div>
