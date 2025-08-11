@@ -1099,7 +1099,9 @@ export default function Index() {
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
                   <div className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:border-white">
                     <div className="flex items-center justify-between mb-4">
-                      <div className="text-4xl">{doc.icon}</div>
+                      <div className="w-16 h-16 rounded-xl overflow-hidden">
+                        <img src={doc.icon} alt={doc.title} className="w-full h-full object-cover" />
+                      </div>
                       <div className="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">
                         {doc.status}
                       </div>
