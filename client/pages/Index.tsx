@@ -760,7 +760,7 @@ export default function Index() {
                 year: "2024",
                 award: "Best Digital Bank",
                 organization: "Global Finance Magazine",
-                icon: "��"
+                icon: "🏆"
               },
               {
                 year: "2024",
@@ -856,7 +856,9 @@ export default function Index() {
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-xexon-gold to-yellow-400 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
                   <div className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:border-white">
                     <div className="text-center">
-                      <div className="text-6xl mb-4">{exec.avatar}</div>
+                      <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden shadow-lg">
+                        <img src={exec.avatar} alt={exec.name} className="w-full h-full object-cover" />
+                      </div>
                       <h3 className="text-xl font-bold text-gray-900 mb-1">{exec.name}</h3>
                       <div className="text-xexon-gold font-semibold mb-3">{exec.title}</div>
                       <div className="text-sm text-gray-600 mb-2">{exec.background}</div>
@@ -1370,7 +1372,7 @@ export default function Index() {
                   { city: "London", timezone: "GMT+0", flag: "🇬🇧" },
                   { city: "New York", timezone: "GMT-5", flag: "🇺🇸" },
                   { city: "Singapore", timezone: "GMT+8", flag: "🇸🇬" },
-                  { city: "Sydney", timezone: "GMT+10", flag: "��🇺" }
+                  { city: "Sydney", timezone: "GMT+10", flag: "🇦🇺" }
                 ].map((office, index) => (
                   <div key={index} className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
                     <div className="text-3xl mb-2">{office.flag}</div>
