@@ -942,7 +942,7 @@ export default function Index() {
               {[
                 {
                   location: "British Virgin Islands",
-                  flag: "🇻🇬",
+                  flag: "https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg",
                   benefits: [
                     "0% corporate tax on offshore income",
                     "No exchange controls or currency restrictions",
@@ -952,7 +952,7 @@ export default function Index() {
                 },
                 {
                   location: "Cayman Islands",
-                  flag: "🇰🇾",
+                  flag: "https://images.pexels.com/photos/4808267/pexels-photo-4808267.jpeg",
                   benefits: [
                     "No direct taxes on profits or capital gains",
                     "Political and economic stability",
@@ -962,7 +962,7 @@ export default function Index() {
                 },
                 {
                   location: "Switzerland",
-                  flag: "🇨🇭",
+                  flag: "https://images.pexels.com/photos/5716001/pexels-photo-5716001.jpeg",
                   benefits: [
                     "Competitive tax rates (8.5-24%)",
                     "World-class banking secrecy",
