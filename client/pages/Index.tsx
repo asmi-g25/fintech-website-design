@@ -791,13 +791,15 @@ export default function Index() {
             <h3 className="text-2xl font-bold text-white mb-8">Featured In</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-60">
               {[
-                { name: "Financial Times", icon: "���" },
-                { name: "Bloomberg", icon: "📊" },
-                { name: "Reuters", icon: "🗞️" },
-                { name: "Wall Street Journal", icon: "📈" }
+                { name: "Financial Times", icon: "https://images.pexels.com/photos/16592498/pexels-photo-16592498.jpeg" },
+                { name: "Bloomberg", icon: "https://images.pexels.com/photos/5716001/pexels-photo-5716001.jpeg" },
+                { name: "Reuters", icon: "https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg" },
+                { name: "Wall Street Journal", icon: "https://images.pexels.com/photos/210600/pexels-photo-210600.jpeg" }
               ].map((press, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl mb-2">{press.icon}</div>
+                  <div className="w-8 h-8 mx-auto mb-2 rounded overflow-hidden">
+                    <img src={press.icon} alt={press.name} className="w-full h-full object-cover opacity-60" />
+                  </div>
                   <div className="text-sm text-gray-400">{press.name}</div>
                 </div>
               ))}
