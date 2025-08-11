@@ -904,7 +904,9 @@ export default function Index() {
                 }
               ].map((advisor, index) => (
                 <div key={index} className="text-center p-4">
-                  <div className="text-3xl mb-2">🎯</div>
+                  <div className="w-10 h-10 mx-auto mb-2 rounded-full overflow-hidden">
+                    <img src={advisor.avatar} alt={advisor.name} className="w-full h-full object-cover" />
+                  </div>
                   <h4 className="font-semibold text-gray-900 text-sm mb-1">{advisor.name}</h4>
                   <div className="text-xs text-xexon-gold mb-1">{advisor.title}</div>
                   <div className="text-xs text-gray-600">{advisor.expertise}</div>
