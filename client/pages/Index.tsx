@@ -881,22 +881,26 @@ export default function Index() {
                 {
                   name: "Dr. Janet Morrison",
                   title: "Former Federal Reserve Governor",
-                  expertise: "Monetary Policy & Regulation"
+                  expertise: "Monetary Policy & Regulation",
+                  avatar: "https://images.pexels.com/photos/4808267/pexels-photo-4808267.jpeg"
                 },
                 {
                   name: "Robert Kim",
                   title: "Ex-Credit Suisse CEO Asia",
-                  expertise: "Private Banking & Wealth Management"
+                  expertise: "Private Banking & Wealth Management",
+                  avatar: "https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg"
                 },
                 {
                   name: "Prof. Elisabeth Weber",
                   title: "MIT Sloan Finance Professor",
-                  expertise: "Digital Assets & DeFi"
+                  expertise: "Digital Assets & DeFi",
+                  avatar: "https://images.pexels.com/photos/210600/pexels-photo-210600.jpeg"
                 },
                 {
                   name: "James Thompson",
                   title: "Former SEC Commissioner",
-                  expertise: "Securities Law & Compliance"
+                  expertise: "Securities Law & Compliance",
+                  avatar: "https://images.pexels.com/photos/1119074/pexels-photo-1119074.jpeg"
                 }
               ].map((advisor, index) => (
                 <div key={index} className="text-center p-4">
