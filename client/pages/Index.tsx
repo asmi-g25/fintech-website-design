@@ -736,16 +736,18 @@ export default function Index() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-70 hover:opacity-100 transition-opacity duration-300">
               {[
-                { name: "Goldman Sachs", logo: "🏦" },
-                { name: "JPMorgan Chase", logo: "🏛️" },
-                { name: "BlackRock", logo: "📈" },
-                { name: "Vanguard", logo: "⚡" },
-                { name: "Fidelity", logo: "💎" },
-                { name: "Deutsche Bank", logo: "🌟" }
+                { name: "Goldman Sachs", logo: "https://images.pexels.com/photos/5845517/pexels-photo-5845517.jpeg" },
+                { name: "JPMorgan Chase", logo: "https://images.pexels.com/photos/351264/pexels-photo-351264.jpeg" },
+                { name: "BlackRock", logo: "https://images.pexels.com/photos/936722/pexels-photo-936722.jpeg" },
+                { name: "Vanguard", logo: "https://images.pexels.com/photos/18274050/pexels-photo-18274050.jpeg" },
+                { name: "Fidelity", logo: "https://images.pexels.com/photos/15942552/pexels-photo-15942552.jpeg" },
+                { name: "Deutsche Bank", logo: "https://images.pexels.com/photos/27390161/pexels-photo-27390161.jpeg" }
               ].map((client, index) => (
                 <MagneticHover key={index}>
                   <div className="group text-center p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-colors duration-300 border border-white/10 hover:border-white/20">
-                    <div className="text-4xl mb-2">{client.logo}</div>
+                    <div className="w-16 h-12 mx-auto mb-3 rounded-lg overflow-hidden shadow-lg">
+                      <img src={client.logo} alt={client.name} className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
                     <div className="text-sm text-gray-300 group-hover:text-white transition-colors duration-300">{client.name}</div>
                   </div>
                 </MagneticHover>
